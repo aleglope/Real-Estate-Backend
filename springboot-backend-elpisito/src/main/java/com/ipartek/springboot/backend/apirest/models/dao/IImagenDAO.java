@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ipartek.springboot.backend.apirest.models.entity.Tipo;
+import com.ipartek.springboot.backend.apirest.models.entity.Imagen;
 
 @Repository
-public interface ITipoDAO extends CrudRepository<Tipo, Long>{
+public interface IImagenDAO extends CrudRepository<Imagen, Long> {
 
 	//DERIVED QUERY METHODS
-	List<Tipo>findByActivo(Integer activo);
+	List<Imagen>findByActivo(Integer activo);
 }

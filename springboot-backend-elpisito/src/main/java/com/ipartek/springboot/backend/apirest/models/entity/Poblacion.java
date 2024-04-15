@@ -35,6 +35,7 @@ public class Poblacion implements Serializable {
 	@Column
 	private String nombre; //PISO, FINCA, LONJA...
 	
+	@Column
 	private Integer activo=1;
 
 }

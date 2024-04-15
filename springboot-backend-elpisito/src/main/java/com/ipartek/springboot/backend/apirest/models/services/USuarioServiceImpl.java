@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipartek.springboot.backend.apirest.models.dao.IUsuarioDAO;
+import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
 import com.ipartek.springboot.backend.apirest.models.entity.Usuario;
 
 @Service
-public class USuarioServiceImpl implements IGeneralService<Usuario>{
+public class USuarioServiceImpl implements IGeneralService<Usuario> {
 	
 	//Una de las principales caracteristicas de un @Service
 	//es que sus atributos sueles ser DAO(Repositorios)
@@ -30,9 +31,7 @@ public class USuarioServiceImpl implements IGeneralService<Usuario>{
 	@Override
 	public List<Usuario> findAllActive() {
 		
-		return findAll().stream()
-			.filter(u -> u.getActivo().equals(1))
-			.toList();
+		return usuarioDAO.findByActivo(1);
 	}
 
 	@Override

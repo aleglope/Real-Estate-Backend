@@ -2,12 +2,16 @@ package com.ipartek.springboot.backend.apirest.models.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,6 +39,12 @@ public class Tipo implements Serializable{
 	@Column
 	private String nombre; //PISO, FINCA, LONJA...
 	
+	@Column
 	private Integer activo=1;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy="tipo")
+	private Set<Inmueble> inmuebles;
 
+	
 }

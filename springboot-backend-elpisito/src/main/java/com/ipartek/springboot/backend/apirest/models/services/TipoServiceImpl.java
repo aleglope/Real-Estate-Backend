@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipartek.springboot.backend.apirest.models.dao.ITipoDAO;
+import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
 import com.ipartek.springboot.backend.apirest.models.entity.Tipo;
 
 @Service
 public class TipoServiceImpl implements IGeneralService<Tipo> {
 
 	@Autowired
-	ITipoDAO tipoDAO;
+	private ITipoDAO tipoDAO;
 	
 	
 	@Override
@@ -24,9 +25,7 @@ public class TipoServiceImpl implements IGeneralService<Tipo> {
 	@Override
 	public List<Tipo> findAllActive() {
 		
-		return findAll().stream()
-			.filter(u -> u.getActivo().equals(1))
-			.toList();
+		return tipoDAO.findByActivo(1);
 	}
 
 	@Override
@@ -45,5 +44,7 @@ public class TipoServiceImpl implements IGeneralService<Tipo> {
 
 		tipoDAO.deleteById(id);
 	}
+
+
 
 }
