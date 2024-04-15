@@ -3,7 +3,7 @@
 Bienvenido a nuestra aplicación de gestión inmobiliaria: una solución integral diseñada con una perfecta integración de Angular, Java Spring Boot y MySQL.
 
 ## Descripción general
-[ ![ Captura-de-pantalla-2024-04-12-015145.png ] ( https://i.postimg.cc/YSpRBKZp/Captura-de-pantalla-2024-04-12-015145.png )] ( https://postimg.cc/G45GvNbN )
+![ Captura-de-pantalla-2024-04-12-015145.png ] ( https://i.postimg.cc/YSpRBKZp/Captura-de-pantalla-2024-04-12-015145.png] ( https://postimg.cc/G45GvNbN )
 
 # Aplicación de gestión inmobiliaria
 
