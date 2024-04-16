@@ -80,9 +80,3 @@ Para ejecutar esta aplicación en su máquina local, deberá instalar lo siguien
 - spring.datasource.password=tu-contraseña
 
 3 . Reemplace su nombre de base de datos, su nombre de usuario y su contraseña con sus detalles reales de MySQL.
-
-## Contribución
-
-¡Tus contribuciones son bienvenidas! No dude en bifurcar este repositorio, realizar cambios y abrir una solicitud de extracción para fusionar sus funciones o mejoras en la rama principal.
-
-Para cualquier consulta o sugerencia, abra un problema en este repositorio.
