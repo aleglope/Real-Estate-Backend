@@ -2,12 +2,16 @@ package com.ipartek.springboot.backend.apirest.models.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,4 +41,8 @@ public class Provincia implements Serializable{
 	
 	@Column
 	private Integer activo=1;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "provincia")
+	private Set<Poblacion> poblaciones;
 }

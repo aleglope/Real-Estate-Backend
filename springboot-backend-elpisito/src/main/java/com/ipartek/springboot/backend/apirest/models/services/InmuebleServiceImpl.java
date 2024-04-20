@@ -1,14 +1,16 @@
 package com.ipartek.springboot.backend.apirest.models.services;
 
-import java.security.PublicKey;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ipartek.springboot.backend.apirest.models.dao.IInmuebleDAO;
 import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
 
-public class InmuebleServiceImpl implements IGeneralService<Inmueble> {
+@Service
+public class InmuebleServiceImpl implements IInmuebleService {
 
 	
 	@Autowired
@@ -47,6 +49,7 @@ public class InmuebleServiceImpl implements IGeneralService<Inmueble> {
 
 		inmuebleDAO.deleteById(id);
 	}
+
 	
 	@Override
 	public List<Inmueble> findAllPortada() {

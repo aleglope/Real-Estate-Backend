@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -43,7 +44,7 @@ public class Tipo implements Serializable{
 	private Integer activo=1;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="tipo")
+	@OneToMany(mappedBy="tipo", cascade=CascadeType.ALL)
 	private Set<Inmueble> inmuebles;
 
 	

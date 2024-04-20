@@ -3,11 +3,12 @@ package com.ipartek.springboot.backend.apirest.models.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ipartek.springboot.backend.apirest.models.dao.IPoblacionDAO;
 import com.ipartek.springboot.backend.apirest.models.entity.Poblacion;
 
-
+@Service
 public class PoblacionServiceImpl implements IGeneralService<Poblacion> {
 
 	@Autowired

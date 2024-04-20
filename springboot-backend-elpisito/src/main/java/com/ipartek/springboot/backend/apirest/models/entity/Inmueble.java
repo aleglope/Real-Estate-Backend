@@ -124,6 +124,10 @@ public class Inmueble implements Serializable{
 	@JoinColumn(name="tipo")
 	private Tipo tipo;
 	
+	@ManyToOne
+	@JoinColumn(name = "poblacion")
+	private Poblacion poblacion;
+	
 	
 	
 	

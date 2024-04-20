@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
 
-public interface IInmuebleService {
+public interface IInmuebleService extends IGeneralService<Inmueble>{
 	
 	
 	List<Inmueble> findAllPortada();

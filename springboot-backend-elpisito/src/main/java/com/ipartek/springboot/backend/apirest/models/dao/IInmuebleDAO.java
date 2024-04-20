@@ -1,4 +1,4 @@
- package com.ipartek.springboot.backend.apirest.models.dao;
+package com.ipartek.springboot.backend.apirest.models.dao;
 
 import java.util.List;
 
