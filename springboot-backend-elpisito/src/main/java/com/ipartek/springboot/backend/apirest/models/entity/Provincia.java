@@ -25,9 +25,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="Provincias")
-public class Provincia implements Serializable{
-	
+@Table(name="provincias")
+public class Provincia implements Serializable {
+
 	@Serial
 	private static final long serialVersionUID = -4355422648219112686L;
 
@@ -37,7 +37,7 @@ public class Provincia implements Serializable{
 	private Long id;
 	
 	@Column
-	private String nombre; //PISO, FINCA, LONJA...
+	private String nombre; 
 	
 	@Column
 	private Integer activo=1;
@@ -45,4 +45,7 @@ public class Provincia implements Serializable{
 	@JsonIgnore
 	@OneToMany(mappedBy = "provincia")
 	private Set<Poblacion> poblaciones;
+	
+	
+	
 }

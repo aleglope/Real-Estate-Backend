@@ -26,27 +26,37 @@ public class UsuarioRestController {
 	@GetMapping("/usuarios")
 	public List<Usuario> findAll() {
 		
+		
 		return usuarioService.findAll();
+		
 	}
 	
+	
 	@GetMapping("/usuarios-activos")
-	public List<Usuario> findAllActive() {
+	public List<Usuario> findAllActive(){
 		
 		return usuarioService.findAllActive();
 	}
 	
-	@GetMapping("/usuario/{id}")
-	public Usuario findById(@PathVariable long id) {
 	
+	
+	
+	@GetMapping("/usuario/{id}")
+	public Usuario findById(@PathVariable Long id) {
+		
+		
 		return usuarioService.findById(id);
 		
 	}
 	
+	
 	@PostMapping("/usuario")
-	public Usuario Create(@RequestBody Usuario usuario) {
-		
+	public Usuario create(@RequestBody Usuario usuario) {
+			
 		return usuarioService.save(usuario);
 	}
+	
+	
 	
 	@PutMapping("/usuario")
 	public Usuario update(@RequestBody Usuario usuario) {
@@ -54,10 +64,19 @@ public class UsuarioRestController {
 		return usuarioService.save(usuario);
 	}
 	
+	
+	
 	@DeleteMapping("/usuario/{id}")
-	public void deleteById(@PathVariable long id) {
+	public void deleteById(@PathVariable Long id) {
 		
 		usuarioService.deleteById(id);
-		
 	}
+	
+	
+	
+	
+	
+	
+
 }
+

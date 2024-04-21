@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ipartek.springboot.backend.apirest.models.entity.Poblacion;
+
 import com.ipartek.springboot.backend.apirest.models.services.IGeneralService;
 
 @RestController
 @RequestMapping("/api")
 public class PoblacionRestController {
+	
+	
 	
 	@Autowired
 	private IGeneralService<Poblacion> poblacionService;
@@ -26,27 +29,37 @@ public class PoblacionRestController {
 	@GetMapping("/poblaciones")
 	public List<Poblacion> findAll() {
 		
+		
 		return poblacionService.findAll();
+		
 	}
 	
-	@GetMapping("/poblaciones-activos")
-	public List<Poblacion> findAllActive() {
+	
+	@GetMapping("/poblaciones-activas")
+	public List<Poblacion> findAllActive(){
 		
 		return poblacionService.findAllActive();
 	}
 	
-	@GetMapping("/poblacion/{id}")
-	public Poblacion findById(@PathVariable long id) {
 	
+	
+	
+	@GetMapping("/poblacion/{id}")
+	public Poblacion findById(@PathVariable Long id) {
+		
+		
 		return poblacionService.findById(id);
 		
 	}
 	
+	
 	@PostMapping("/poblacion")
-	public Poblacion Create(@RequestBody Poblacion poblacion) {
-		
+	public Poblacion create(@RequestBody Poblacion poblacion) {
+			
 		return poblacionService.save(poblacion);
 	}
+	
+	
 	
 	@PutMapping("/poblacion")
 	public Poblacion update(@RequestBody Poblacion poblacion) {
@@ -54,10 +67,17 @@ public class PoblacionRestController {
 		return poblacionService.save(poblacion);
 	}
 	
+	
+	
 	@DeleteMapping("/poblacion/{id}")
-	public void deleteById(@PathVariable long id) {
+	public void deleteById(@PathVariable Long id) {
 		
 		poblacionService.deleteById(id);
-		
 	}
+	
+	
+	
+	
+
 }
+

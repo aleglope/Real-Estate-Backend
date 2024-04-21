@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.ipartek.springboot.backend.apirest.models.entity.Provincia;
 
 @Repository
-public interface IProvinciaDAO extends CrudRepository<Provincia, Long>{
-
+public interface IProvinciaDAO extends CrudRepository<Provincia, Long> {
+	
 	//DERIVED QUERY METHODS
 	List<Provincia>findByActivo(Integer activo);
+
 }

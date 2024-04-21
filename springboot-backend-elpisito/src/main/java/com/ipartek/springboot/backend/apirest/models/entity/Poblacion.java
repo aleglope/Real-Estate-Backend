@@ -41,7 +41,7 @@ public class Poblacion implements Serializable {
 	private Long id;
 	
 	@Column
-	private String nombre; //PISO, FINCA, LONJA...
+	private String nombre; 
 	
 	@Column
 	private Integer activo=1;
@@ -49,13 +49,12 @@ public class Poblacion implements Serializable {
 	@JsonIgnoreProperties
 	@ManyToOne
 	@JoinColumn(name="provincia")
-	private Provincia provincia; //Este es el mappedby de onetomany de la clase provincia
+	private Provincia provincia;//Este es el mappedBy de @OneToMany de la clase Provincia
+	
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "poblacion", cascade=CascadeType.ALL)
 	private Set<Inmueble> inmuebles;
 	
-	
-	
-	
+
 }

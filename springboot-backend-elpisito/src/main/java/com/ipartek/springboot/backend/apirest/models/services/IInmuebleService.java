@@ -9,5 +9,5 @@ public interface IInmuebleService extends IGeneralService<Inmueble>{
 	
 	List<Inmueble> findAllPortada();
 	//List<Inmueble> finder();
-	
+
 }

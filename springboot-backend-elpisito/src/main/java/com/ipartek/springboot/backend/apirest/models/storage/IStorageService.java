@@ -1,22 +1,23 @@
-/*package com.ipartek.springboot.backend.apirest.models.storage;
+package com.ipartek.springboot.backend.apirest.storage;
 
 import java.io.IOException;
 
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-import jakarta.annotation.Resource;
+
 
 public interface IStorageService {
 	
-	//Metodo auxiliar para preparar todo lo necesario
+	//Método auxiliar para preparar todo lo necesario
 	//para la subida de archivos
 	void init() throws IOException;
 	
-	//Con este metodo almacenaremos FISICAMENTE
-	//el archivo en la carpeta de destino (mediafiles que esta definida en application-properties)
-	String store(MultipartFile file, long idInmueble) throws RuntimeException;
-	
-	Resource joResource(String filename);
+	//Con este método almacenaremos FISICAMENTE
+	//el archivo en la carpeta de destino (mediafiles que está definida en application-properties)
+	String store(MultipartFile file, Long idInmueble) throws RuntimeException;
 	
 	
-}*/
+	Resource loadAsResource(String filename);
+
+}

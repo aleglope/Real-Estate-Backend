@@ -6,15 +6,16 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
-import com.ipartek.springboot.backend.apirest.models.entity.Poblacion;
-import com.ipartek.springboot.backend.apirest.models.entity.Tipo;
+
+
+
 
 @Repository
-public interface IInmuebleDAO extends CrudRepository<Inmueble, Long>{
-
-	//DERIVED QUERY METHODS
-	List<Inmueble> findByActivo(Integer activo);
-	List<Inmueble> findByActivoAndPortada(Integer activo, Integer portada);
-	/*List<Inmueble> findByTipoAndPoblacionAndOperacionAndActivo(Tipo tipo, Poblacion poblacion, String operacion, Integer activo);*/
+public interface IInmuebleDAO extends CrudRepository<Inmueble, Long> {
 	
+	//DERIVED QUERY METHODS
+	List<Inmueble>findByActivo(Integer activo);
+	List<Inmueble> findByActivoAndPortada(Integer activo, Integer portada);
+	//List<Inmueble> findByTipoAndPoblacionAndOperacionAndActivo(Tipo tipo, Poblacion poblacion, String operacion,Integer activo);
+
 }

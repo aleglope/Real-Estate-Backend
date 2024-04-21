@@ -27,7 +27,7 @@ import lombok.ToString;
 @Entity
 @Table(name="inmuebles")
 public class Inmueble implements Serializable{
-
+	
 	@Serial
 	private static final long serialVersionUID = 654226127056865985L;
 	
@@ -40,7 +40,7 @@ public class Inmueble implements Serializable{
 	private String via; //CALLE, PLAZA, CARRETERA
 	
 	@Column
-	private String titular; //Clain - Maravilloso piso en madrid...
+	private String titular; //Claim - Maravilloso piso en Madrid...
 	
 	@Column(name="nombre_via")
 	private String nombreVia; //del Percebe
@@ -55,10 +55,10 @@ public class Inmueble implements Serializable{
 	private String puerta; //A,B,C...
 	
 	@Column
-	private String apertura;//EXTERIOR, INTERIOR
+	private String apertura; //EXTERIOR, INTERIOR...
 	
 	@Column
-	private String orientacion; //NORTE, SUR....
+	private String orientacion; //NORTE, SUR...
 	
 	@Column
 	private String cp;
@@ -82,55 +82,53 @@ public class Inmueble implements Serializable{
 	private String numeroBanhos;
 	
 	@Column(length = 3500)
-	private String descripcion; //Una amplia descripcion del inmueble
+	private String descripcion;//Una amplia descripción del inmueble
 	
 	@Column(name="tipo_calefaccion")
-	private String tipoCalefaccion; //SIN CALEFACCION, ELECTRICA...
+	private String tipoCalefaccion;//SIN CALEFACCIÓN, ELÉCTRICA...
 	
 	@Column
-	private Integer amueblado; // amueblado, 0 no amueblado
+	private Integer amueblado;//1 si, 0 no 
 	
-	@Column(name="numero_Balcones")
+	@Column(name="numero_balcones")
 	private String numeroBalcones;
 	
 	@Column(name="plazas_garaje")
-	private String numeroGaraje;
+	private String plazasGaraje;
 	
 	@Column
-	private Integer piscina; //1 si 0 no
+	private Integer piscina; //1 si, 0 no 
 	
 	@Column
-	private Integer trastero;
+	private Integer trastero; //1 si, 0 no 
 	
 	@Column
-	private Integer ascensor;
+	private Integer ascensor; //1 si, 0 no 
 	
 	@Column
-	private Integer jardin;
+	private Integer jardin; //1 si, 0 no 
 	
 	@Column
-	private Integer tendedero;
+	private Integer tendedero; //1 si, 0 no 
 	
 	@Column
-	private Integer portada=0;
+	private Integer portada=0; //1 si, 0 no 
 	
 	@Column
-	private Integer activo=1;
+	private Integer activo=1; 
 	
 	@OneToMany(mappedBy="inmueble")
 	private Set<Imagen> imagenes;
 	
 	@ManyToOne
 	@JoinColumn(name="tipo")
-	private Tipo tipo;
+	private Tipo tipo;//Este esl mappedBy de @OneToMany de la clase Tipo
 	
 	@ManyToOne
-	@JoinColumn(name = "poblacion")
+	@JoinColumn(name="poblacion")
 	private Poblacion poblacion;
 	
 	
 	
-	
-	
-	
+
 }

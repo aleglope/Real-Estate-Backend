@@ -13,40 +13,54 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ipartek.springboot.backend.apirest.models.entity.Tipo;
+
 import com.ipartek.springboot.backend.apirest.models.services.IGeneralService;
+
+
 
 @RestController
 @RequestMapping("/api")
 public class TipoRestController {
-
 	
+		
 	@Autowired
 	private IGeneralService<Tipo> tipoService;
+	
 	
 	@GetMapping("/tipos")
 	public List<Tipo> findAll() {
 		
+		
 		return tipoService.findAll();
+		
 	}
 	
+	
 	@GetMapping("/tipos-activos")
-	public List<Tipo> findAllActive() {
+	public List<Tipo> findAllActive(){
 		
 		return tipoService.findAllActive();
 	}
 	
-	@GetMapping("/tipo/{id}")
-	public Tipo findById(@PathVariable long id) {
 	
+	
+	
+	@GetMapping("/tipo/{id}")
+	public Tipo findById(@PathVariable Long id) {
+		
+		
 		return tipoService.findById(id);
 		
 	}
 	
+	
 	@PostMapping("/tipo")
-	public Tipo Create(@RequestBody Tipo tipo) {
-		
+	public Tipo create(@RequestBody Tipo tipo) {
+			
 		return tipoService.save(tipo);
 	}
+	
+	
 	
 	@PutMapping("/tipo")
 	public Tipo update(@RequestBody Tipo tipo) {
@@ -54,10 +68,14 @@ public class TipoRestController {
 		return tipoService.save(tipo);
 	}
 	
+	
+	
 	@DeleteMapping("/tipo/{id}")
-	public void deleteById(@PathVariable long id) {
+	public void deleteById(@PathVariable Long id) {
 		
 		tipoService.deleteById(id);
-		
 	}
+	
+
+
 }

@@ -12,54 +12,72 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ipartek.springboot.backend.apirest.models.entity.Poblacion;
 import com.ipartek.springboot.backend.apirest.models.entity.Provincia;
+
 import com.ipartek.springboot.backend.apirest.models.services.IGeneralService;
 
 @RestController
 @RequestMapping("/api")
 public class ProvinciaRestController {
 	
+	
 	@Autowired
 	private IGeneralService<Provincia> provinciaService;
 	
 	
+
 	@GetMapping("/provincias")
 	public List<Provincia> findAll() {
 		
+		
 		return provinciaService.findAll();
+		
 	}
 	
-	@GetMapping("/provincias-activos")
-	public List<Provincia> findAllActive() {
+	
+	@GetMapping("/provincias-activas")
+	public List<Provincia> findAllActive(){
 		
 		return provinciaService.findAllActive();
 	}
 	
-	@GetMapping("provincia/{id}")
-	public Provincia findById(@PathVariable long id) {
 	
+	
+	
+	@GetMapping("/provincia/{id}")
+	public Provincia findById(@PathVariable Long id) {
+		
+		
 		return provinciaService.findById(id);
 		
 	}
 	
-	@PostMapping("provincia")
-	public Provincia Create(@RequestBody Provincia provincia) {
-		
+	
+	@PostMapping("/provincia")
+	public Provincia create(@RequestBody Provincia provincia) {
+			
 		return provinciaService.save(provincia);
 	}
 	
-	@PutMapping("provincia")
+	
+	
+	@PutMapping("/provincia")
 	public Provincia update(@RequestBody Provincia provincia) {
 		
 		return provinciaService.save(provincia);
 	}
 	
-	@DeleteMapping("provincia/{id}")
-	public void deleteById(@PathVariable long id) {
+	
+	
+	@DeleteMapping("/provincia/{id}")
+	public void deleteById(@PathVariable Long id) {
 		
 		provinciaService.deleteById(id);
-		
 	}
+	
+	
+	
+	
 
 }
+

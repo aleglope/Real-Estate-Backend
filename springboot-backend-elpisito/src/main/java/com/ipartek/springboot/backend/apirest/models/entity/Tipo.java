@@ -20,6 +20,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -27,7 +29,7 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name="tipos")
-public class Tipo implements Serializable{
+public class Tipo implements Serializable {
 	
 	@Serial
 	private static final long serialVersionUID = 6461797043143800280L;
@@ -46,6 +48,6 @@ public class Tipo implements Serializable{
 	@JsonIgnore
 	@OneToMany(mappedBy="tipo", cascade=CascadeType.ALL)
 	private Set<Inmueble> inmuebles;
-
 	
+
 }

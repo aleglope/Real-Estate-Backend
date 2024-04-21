@@ -22,15 +22,16 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name="usuarios")
-public class Usuario implements Serializable {
+public class Usuario implements Serializable{
 	
+
 	@Serial
-	private static final long serialVersionUID = 7988841732097846000L;
+	private static final long serialVersionUID = -723801687690265687L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)//IDENTITY es un incremental para mySQL
 	@Column
-	private long id;
+	private Long id;
 	
 	@Column
 	private String user;
@@ -39,7 +40,7 @@ public class Usuario implements Serializable {
 	private String password;
 	
 	@Column
-	private String passopen="passopen"; //El password sin hashear
+	private String passopen="passopen";//El password sin hashear
 	
 	@Column
 	private String email;
@@ -51,4 +52,5 @@ public class Usuario implements Serializable {
 	private Integer activo=1;
 	
 	
+
 }
