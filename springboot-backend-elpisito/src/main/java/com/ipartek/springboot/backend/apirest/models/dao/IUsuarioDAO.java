@@ -11,6 +11,7 @@ import com.ipartek.springboot.backend.apirest.models.entity.Usuario;
 @Repository
 public interface IUsuarioDAO extends CrudRepository<Usuario,Long> {
 	
+	
 	//DERIVED QUERY METHODS
 	List<Usuario>findByActivo(Integer activo);
 	

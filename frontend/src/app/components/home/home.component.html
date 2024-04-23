@@ -1,0 +1,13 @@
+<div class="contenedor">
+
+    <h1>Bienvenido <span class="nombre-usuario"> {{usuario}} </span> a elpisito.com</h1>
+    <app-finder></app-finder>
+
+    <!-- Para que un componente admita margin es necesario convertirlo a block -->
+    <app-banner-horizontal style="display: block;" class="mb-3" [datos]="datos1"></app-banner-horizontal>
+    
+    <app-banner-horizontal [datos]="datos2"></app-banner-horizontal>
+      
+    <app-list-home></app-list-home>
+
+</div>

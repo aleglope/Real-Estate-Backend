@@ -1,5 +1,8 @@
 package com.ipartek.springboot.backend.apirest.models.services;
 
+
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,15 +65,22 @@ public class UsuarioServiceImpl implements IGeneralService<Usuario> {
 		return usuarioDAO.save(item);
 		//Si el usuario llega con id es un update
 		//Si el usuario llega sin id es un create
-
+	
+		
 
 	}
+	
+	
 
 	@Override
 	public void deleteById(Long id) {
-
+		
 		usuarioDAO.deleteById(id);
+		
 
 	}
+
+
+	
 
 }

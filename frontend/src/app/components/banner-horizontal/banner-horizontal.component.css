@@ -1,0 +1,133 @@
+/* ================================================= */
+/* FIRST MOBILE */
+/* ================================================= */
+    .contenedor{
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen{    
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+
+    }
+
+    .texto{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--gris-claro);
+        padding: 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+     
+    }
+
+    .texto h3{
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+    }
+
+    .texto p{
+
+        margin-bottom: 0.8rem;
+        line-height: normal;
+
+    }
+
+    .texto a{
+
+        color: var(--negro);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .texto a::before{
+        background-image: url('../../../assets/img/el-pisito.svg');
+        background-size: 20px 20px;
+        display: inline-block;
+        width: 20px; 
+        height: 20px;
+        content:""; /* esta notación es importante */  
+        margin-right: 0.3rem; 
+
+    }
+
+    .texto a:link{
+
+        color: var(--negro);
+    }
+
+    .texto a:visited{
+
+        color: var(--negro);
+    }
+
+    .texto a:hover{
+
+        color: var(--negro);
+    }
+
+    .texto a:active{
+
+        color: var(--negro);
+    }
+
+
+/* ================================================= */
+/* MEDIA QUERIES */
+/* ================================================= */
+
+/* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
+@media only screen and (min-width:576px){
+
+ 
+
+
+
+}
+
+
+/* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
+@media only screen and (min-width:768px){
+
+    .contenedor{
+
+        flex-direction: row;
+    }
+
+    .imagen{    
+        width: 55%;
+        border-radius: 0.5rem 0 0 0.5rem;
+
+    }
+
+    .texto{
+
+        border-radius: 0 0.5rem 0.5rem 0;
+     
+    }
+
+
+}
+
+
+
+/* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
+@media only screen and (min-width:992px){
+
+
+  
+
+}
+
+/* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
+@media only screen and (min-width:1200px){
+
+
+
+
+}

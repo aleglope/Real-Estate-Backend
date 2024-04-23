@@ -1,0 +1,109 @@
+/*====================================================================*/
+/* COLORES CORPORATIVOS*/
+/*====================================================================*/
+
+:root{
+
+    --azul:#256197;
+    --azul-oscuro:#1a456b;
+    --amarillo:#e8b610;
+    --gris:#b1b3b4;
+    --gris-oscuro:#999999;
+    --gris-claro:#eceeef;
+    --negro:#333333;
+
+}
+
+/* ================================================= */
+/* FIRST MOBILE */
+/* ================================================= */
+
+html,body{
+
+    font-size: 16px; /* 1rem */
+
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+h2{
+
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+
+}
+
+h3{
+
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+
+}
+
+a{
+
+    text-decoration: none;
+}
+
+
+
+
+/* ================================================= */
+/* MEDIA QUERIES */
+/* ================================================= */
+
+/* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
+@media only screen and (min-width:576px){
+
+ 
+
+
+
+}
+
+
+/* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
+@media only screen and (min-width:768px){
+
+   
+
+
+}
+
+
+
+/* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
+@media only screen and (min-width:992px){
+
+
+  
+
+}
+
+/* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
+@media only screen and (min-width:1200px){
+
+
+
+
+}
+
+
+
+
+
+
