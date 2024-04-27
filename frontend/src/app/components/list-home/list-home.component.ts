@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InmuebleService } from '../../services/inmueble.service';
+import { Inmueble } from '../../models/entity';
 
 @Component({
   selector: 'app-list-home',
@@ -8,7 +9,15 @@ import { InmuebleService } from '../../services/inmueble.service';
 })
 export class ListHomeComponent implements OnInit {
 
-  
+//////////////////////////////////////////////////////
+  nFases:number=1;
+  cargaCompletada:boolean=false;
+  fasesCargadas:number=0;
+//////////////////////////////////////////////////////
+
+  aDatos:any[];
+
+
   constructor(
     private _inmuebleService:InmuebleService
   ){}
@@ -18,10 +27,37 @@ export class ListHomeComponent implements OnInit {
   }
 
   getDatos():void{
-    
-  //this._inmuebleService.getInmueblesPortada()
+
+    this._inmuebleService.getInmueblesPortada().subscribe({
+
+      next: (datos) => {
+        //console.log(datos);
+        this.aDatos = datos;
+      }
+      ,
+      error: (error) => {}
+      ,
+      complete: () => {}
+
+
+    });
 
   }
+
+  ///////////////////////////////
+  faseCarga():void{
+
+    this.fasesCargadas++;
+
+    if(this.fasesCargadas == this.nFases){
+      this.cargaCompletada = true;
+
+    }
+
+
+  }
+  /////////////////////////////
+
 
 
 }

@@ -17,6 +17,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { ListHomeComponent } from './components/list-home/list-home.component';
 import { BannerHorizontalComponent } from './components/banner-horizontal/banner-horizontal.component';
 import { FinderComponent } from './components/finder/finder.component';
+import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueble.component';
+import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { FinderComponent } from './components/finder/finder.component';
     ErrorComponent,
     ListHomeComponent,
     BannerHorizontalComponent,
-    FinderComponent
+    FinderComponent,
+    FichaInmuebleComponent,
+    CarouselFichaComponent,
   ],
   imports: [
     BrowserModule,
