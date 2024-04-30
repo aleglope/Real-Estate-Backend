@@ -30,15 +30,7 @@ export interface Inmueble{
     via:string;
     poblacion:Poblacion;
     tipo:Tipo
-    imagenes:imagen[]
 
-}
-
-export interface imagen{
-
-    id:number;
-    nombre:string;
-    activo:number
 }
 
 export interface Tipo{

@@ -19,6 +19,7 @@ import { BannerHorizontalComponent } from './components/banner-horizontal/banner
 import { FinderComponent } from './components/finder/finder.component';
 import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueble.component';
 import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
+import { NoImageDirective } from './directives/no-image.directive';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { CarouselFichaComponent } from './components/carousel-ficha/carousel-fic
     FinderComponent,
     FichaInmuebleComponent,
     CarouselFichaComponent,
+    NoImageDirective,
   ],
   imports: [
     BrowserModule,
