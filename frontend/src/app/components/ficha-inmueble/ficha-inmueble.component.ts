@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ficha-inmueble',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FichaInmuebleComponent {
 
+  @Input() datos:any;//aqui estan todos los datos del inmueble incluidas las imagenes
+
 }
+

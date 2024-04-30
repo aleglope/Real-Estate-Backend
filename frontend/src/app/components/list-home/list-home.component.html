@@ -8,7 +8,7 @@
 
     </h2>
 
-    <app-ficha-inmueble></app-ficha-inmueble>
+    <app-ficha-inmueble *ngFor="let inmueble of aDatos" [datos]="inmueble"></app-ficha-inmueble>
 
 
     <!-- Aquí renderizaremos un "ficha inmueble" tantas veces
