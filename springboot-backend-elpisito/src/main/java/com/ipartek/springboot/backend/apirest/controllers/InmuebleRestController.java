@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ipartek.springboot.backend.apirest.models.entity.Inmueble;
 import com.ipartek.springboot.backend.apirest.models.services.IInmuebleService;
 
-
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
 public class InmuebleRestController {
@@ -41,7 +41,7 @@ public class InmuebleRestController {
 		return inmuebleService.findAllActive();
 	}
 	
-	@CrossOrigin(origins= {"http://localhost:4200"})
+	
 	@GetMapping("/inmuebles-portada")
 	public List<Inmueble> findAllPortada(){
 		
