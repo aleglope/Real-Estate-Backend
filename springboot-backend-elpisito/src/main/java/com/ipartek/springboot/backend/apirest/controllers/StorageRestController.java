@@ -11,6 +11,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ import com.ipartek.springboot.backend.apirest.storage.IStorageService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/media")
 public class StorageRestController {
@@ -59,10 +60,10 @@ public class StorageRestController {
 						.path("/media/file/")  //Añadimos la carpeta en la que se encuentra el recurso "http://localhost:8080/media/file"
 						.path(filename) //"http://localhost:8080/media/file/74784845959595.jpg"
 						.toUriString();
-						
+
 		}catch(RuntimeException e) {
-			
-			
+
+
 			response.put("mensaje", "Error al tratar de subir la imagen");
 			response.put("error", e.getMessage());
 			
