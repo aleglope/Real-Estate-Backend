@@ -9,6 +9,11 @@
 
     </h2>
 
-    <app-ficha-inmueble style="display: block;" class="mt-3" *ngFor="let inmueble of aDatos" [datos]="inmueble"></app-ficha-inmueble>
+    <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+
+    <div *ngIf="cargaCompletada" class="contenedor-fichas">    
+        <app-ficha-inmueble style="display: block;" class="mt-3 ficha" *ngFor="let inmueble of aDatos" [datos]="inmueble"></app-ficha-inmueble>
+    </div>
+    
 
 </section>

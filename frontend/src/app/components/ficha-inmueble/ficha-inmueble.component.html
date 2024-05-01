@@ -1,50 +1,55 @@
 <article class="ficha">
 
-    <div>
-        <app-carousel-ficha [datosCarousel]="datos"></app-carousel-ficha>
+ 
+    <app-carousel-ficha class="carousel-ficha" [datosCarousel]="datos"></app-carousel-ficha>
+ 
+    <div class="datos-y-footer">
+
+        <div class="datos-ficha">
+        
+            <span class="precio">{{datos.precio | euros}}</span>
+            
+            <div class="operacion-poblacion">
+                <span class="poblacion">{{datos.poblacion.nombre}} ({{datos.poblacion.provincia.nombre}})</span>
+                <span class="operacion">{{datos.operacion}}</span>        
+            </div>
+    
+            <div class="descripcion">{{datos.descripcion}}</div>
+    
+        </div>
+    
+        <footer class="footer-ficha">
+    
+            <div>
+                <i class="fa-solid fa-circle-info boton-info"></i>
+            </div>
+    
+    
+            <div class="iconos">
+    
+                <div>
+                    <span>{{datos.numeroBanhos}}</span>
+                    <img src="assets/img/004-bathtub.svg" alt="Icono Baño">
+                </div>
+    
+                <div>
+                    <span>{{datos.numeroHabitaciones}}</span>
+                    <img src="assets/img/017-bed.svg" alt="Icono habitaciones">
+                </div>
+    
+                <div>
+                    <span>{{datos.planta}}</span>
+                    <img src="assets/img/011-office building.svg" alt="Icono altura">
+                </div>
+    
+            </div>
+    
+        </footer>
+            
+
+
     </div>
     
-    <div class="datos-ficha">
-        
-        <span class="precio">{{datos.precio | euros}}</span>
-        
-        <div class="operacion-poblacion">
-            <span class="poblacion">{{datos.poblacion.nombre}}</span>
-            <span class="operacion">{{datos.operacion}}</span>
-        </div>
-
-        
-
-    </div>
-
-    <footer class="footer-ficha">
-
-        <div>
-            <i class="fa-solid fa-circle-info boton-info"></i>
-        </div>
-
-
-        <div class="iconos">
-
-            <div>
-                <span>{{datos.numeroBanhos}}</span>
-                <img src="assets/img/004-bathtub.svg" alt="Icono Baño">
-            </div>
-
-            <div>
-                <span>{{datos.numeroHabitaciones}}</span>
-                <img src="assets/img/017-bed.svg" alt="Icono habitaciones">
-            </div>
-
-            <div>
-                <span>{{datos.planta}}</span>
-                <img src="assets/img/011-office building.svg" alt="Icono altura">
-            </div>
-
-        </div>
-
-    </footer>
-        
 
 
 </article>

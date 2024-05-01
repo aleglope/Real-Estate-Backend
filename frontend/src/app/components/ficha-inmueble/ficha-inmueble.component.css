@@ -1,6 +1,15 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
+
+.ficha{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 .iconos{
     display: flex;
     margin-right: 1rem;
@@ -74,6 +83,10 @@
     font-size: 1.2rem;
 }
 
+.descripcion{
+    display: none;
+}
+
 
 /* ================================================= */
 /* MEDIA QUERIES */
@@ -92,7 +105,48 @@
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
-   
+    .ficha{
+        flex-direction: row;  
+    }
+
+    .carousel-ficha{
+        width: 55%;
+    }
+
+    .datos-y-footer{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px #eeeeee solid;
+        border-top: 1px #eeeeee solid;
+        border-left: none;
+        border-right: 1px #eeeeee solid;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .footer-ficha{
+        border-radius: 0 0 0.5rem 0;
+        background-color: white;
+
+    }
+
+    .datos-ficha{
+        border-left: none;
+        border-right: none;
+    }
+
+    .operacion-poblacion{
+
+        flex-direction: column;
+        align-items: start;
+
+    }
+
+    .descripcion{
+        display: inline-block;
+        margin-top: 1rem;
+    }
 
 
 }

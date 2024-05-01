@@ -21,6 +21,10 @@ import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueb
 import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
 import { NoImageDirective } from './directives/no-image.directive';
 import { EurosPipe } from './pipes/euros.pipe';
+import { AddTipoComponent } from './components/add-tipo/add-tipo.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
+import { FormsModule } from '@angular/forms';
+import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
 
 
 @NgModule({
@@ -42,11 +46,15 @@ import { EurosPipe } from './pipes/euros.pipe';
     CarouselFichaComponent,
     NoImageDirective,
     EurosPipe,
+    ListTipoComponent,
+    AddTipoComponent,
+    PreloaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

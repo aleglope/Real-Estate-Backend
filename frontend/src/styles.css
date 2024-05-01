@@ -60,6 +60,56 @@ a{
 }
 
 
+/* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
+.activo{
+
+    font-size: 2rem;
+    color:greenyellow;
+    text-align:center;
+}
+
+/* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
+.inactivo{
+
+    font-size: 2rem;
+    color:red;
+    text-align:center;
+
+}
+
+/* ES PARA LOS LIST */
+.centrar-activo{
+
+    text-align: center;
+}
+
+/* ES PARA LOS LIST */
+td,th{
+    vertical-align: middle;
+}
+
+
+
+.cabecera-admin{
+
+    background-color: var(--gris);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.formulario{
+
+    width: 80%;
+}
+
+.contenedor-formulario{
+
+    display: flex;
+    justify-content: center;
+
+
 
 
 /* ================================================= */
@@ -69,7 +119,7 @@ a{
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
 @media only screen and (min-width:576px){
 
- 
+
 
 
 
@@ -79,7 +129,10 @@ a{
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
-   
+    .formulario{
+
+        width: 50%;
+    }
 
 
 }
@@ -89,7 +142,10 @@ a{
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
+    .formulario{
 
+        width: 40%;
+    }
   
 
 }
@@ -101,9 +157,3 @@ a{
 
 
 }
-
-
-
-
-
-

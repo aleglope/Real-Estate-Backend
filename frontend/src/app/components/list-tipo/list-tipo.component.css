@@ -1,20 +1,10 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
-.contenedor-no-imagen img{
-    width: 100%;
-    border-left: 1px #eeeeee solid;
-    border-right: 1px #eeeeee solid;
-    border-top: 1px #eeeeee solid;
-    border-radius: 0.5rem 0.5rem 0 0;
-    
+.contenedor{
+
+    padding: 1rem;
 }
-
-.carousel-inner img{
-
-    border-radius: 0.5rem 0.5rem 0 0;
-}
-
 
 
 
@@ -36,19 +26,7 @@
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
-    .contenedor-no-imagen img{
-        width: 100%;
-        border-left: 1px #eeeeee solid;
-        border-bottom: 1px #eeeeee solid;
-        border-top: 1px #eeeeee solid;
-        border-radius: 0.5rem 0 0 0.5rem;
-        
-    }
-
-    .carousel-inner img{
-
-        border-radius: 0.5rem 0 0 0.5rem;
-    }
+   
 
 
 }

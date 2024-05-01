@@ -1,0 +1,49 @@
+<div class="contenedor">
+
+    <h1 class="cabecera-admin">Listado de tipos</h1>
+    
+    <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+    
+    <div *ngIf="cargaCompletada">
+    
+     <table class="table">
+    
+        <thead>
+    
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">TIPO</th>
+                <th class="centrar-activo" scope="col">ACTIVO</th>
+                <th scope="col">EDITAR</th>
+    
+            </tr>
+    
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let dato of aDatos">
+                <th scope="row">{{dato.id}}</th>
+                <td>{{dato.nombre}}</td>
+                <td [ngClass]="{
+                    'activo':dato.activo==1,
+                    'inactivo':dato.activo==0
+    
+                }">●</td>
+                <td><button type="button" class="btn btn-success btn-sm">Editar</button></td>
+    
+    
+    
+            </tr>
+    
+    
+    
+        </tbody>
+    
+     </table>
+    
+    </div>
+    
+    
+    
+    </div>
+    

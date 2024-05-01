@@ -2,33 +2,34 @@
 /* FIRST MOBILE */
 /* ================================================= */
 
-    .oportunidades{
 
-        background-color: var(--azul);
-        border-radius: 5px;
-        padding: 1rem;
-        color:white;
-        display: flex;
-        align-items: center;
-    }
+.oportunidades{
 
-    .imagen-logo{
-        height: 2rem;
-        filter:invert(1);
-        margin-left: 10px;   
-    }
+    background-color: var(--azul);
+    border-radius: 5px;
+    padding: 1rem;
+    color:white;
+    display: flex;
+    align-items: center;
+}
 
-    .imagen-logo2{
-        height: 2rem;
-        filter:invert(0.8);
-        margin-left: 10px;   
-    }
+.imagen-logo{
+    height: 2rem;
+    filter:invert(1);
+    margin-left: 10px;   
+}
 
-    .imagen-logo3{
-        height: 2rem;
-        filter:invert(0.6);
-        margin-left: 10px;   
-    }
+.imagen-logo2{
+    height: 2rem;
+    filter:invert(0.8);
+    margin-left: 10px;   
+}
+
+.imagen-logo3{
+    height: 2rem;
+    filter:invert(0.6);
+    margin-left: 10px;   
+}
 
 
 /* ================================================= */
@@ -38,7 +39,7 @@
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
 @media only screen and (min-width:576px){
 
- 
+
 
 
 
@@ -48,7 +49,7 @@
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
-   
+
 
 
 }
@@ -58,8 +59,16 @@
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
+.contenedor-fichas{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 
-  
+}
+.ficha{
+    width: 60%;
+}
+
 
 }
 
