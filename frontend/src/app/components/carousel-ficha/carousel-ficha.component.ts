@@ -6,12 +6,11 @@ import { GLOBAL } from '../../environments/global';
   templateUrl: './carousel-ficha.component.html',
   styleUrl: './carousel-ficha.component.css'
 })
-export class CarouselFichaComponent implements OnInit {
+export class CarouselFichaComponent{
 
-  @Input() datosCarousel:any; //aqui estan todos los datos del inmueble
-    url:string=GLOBAL.url_imagen; //aqui esta la url de la imagen
 
-    ngOnInit(): void {
-      console.log(this.datosCarousel);
-    }
+  @Input() datosCarousel:any;//aquí están todos los datos del inmueble
+    url:string = GLOBAL.url_imagen;
+
+
 }

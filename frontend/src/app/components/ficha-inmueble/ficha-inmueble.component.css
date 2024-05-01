@@ -3,34 +3,42 @@
 /* ================================================= */
 .iconos{
     display: flex;
-    margin: 1rem;
+    margin-right: 1rem;
 }
 
+
 .iconos img{
+
     height: 1.4rem;
 
 }
 
+
 .iconos div{
+
     display: flex;
     align-items: center;
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
+
 }
 
+
 .iconos span{
+
     font-size: 1.3rem;
     color: var(--negro);
-    font-weight: 600;
-    margin-right: 0.2;
+    font-weight:600;
+    margin-right: 0.2rem;
 }
 
 .footer-ficha{
+
     background-color: var(--gris-claro);
     border-radius: 0 0 0.5rem 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding:0.5rem;
 }
 
 .footer-ficha div:first-child{
@@ -39,12 +47,32 @@
 }
 
 .boton-info{
+
     cursor: pointer;
-    font-size: 1.5;
+    font-size: 2rem;
     margin-left: 1rem;
-    color:var(--azul-oscuro)
+    color:var(--azul-oscuro);
 }
 
+.precio{
+    font-size: 1.5rem;
+}
+
+.datos-ficha{
+    padding: 0.5rem 1rem;
+    border-left: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+}
+
+.operacion-poblacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.operacion{
+    font-size: 1.2rem;
+}
 
 
 /* ================================================= */
@@ -54,7 +82,7 @@
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
 @media only screen and (min-width:576px){
 
-
+ 
 
 
 
@@ -64,15 +92,18 @@
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
 @media only screen and (min-width:768px){
 
+   
+
 
 }
+
 
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width:992px){
 
 
-
+  
 
 }
 

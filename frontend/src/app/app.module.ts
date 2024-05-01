@@ -20,6 +20,7 @@ import { FinderComponent } from './components/finder/finder.component';
 import { FichaInmuebleComponent } from './components/ficha-inmueble/ficha-inmueble.component';
 import { CarouselFichaComponent } from './components/carousel-ficha/carousel-ficha.component';
 import { NoImageDirective } from './directives/no-image.directive';
+import { EurosPipe } from './pipes/euros.pipe';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { NoImageDirective } from './directives/no-image.directive';
     FichaInmuebleComponent,
     CarouselFichaComponent,
     NoImageDirective,
+    EurosPipe,
   ],
   imports: [
     BrowserModule,

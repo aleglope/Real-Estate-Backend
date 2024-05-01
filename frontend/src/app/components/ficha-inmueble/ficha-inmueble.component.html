@@ -1,14 +1,22 @@
 <article class="ficha">
+
     <div>
-        <app-carousel-ficha [datosCarousel]="datos"></app-carousel-ficha> //aqui llegan los datos
+        <app-carousel-ficha [datosCarousel]="datos"></app-carousel-ficha>
     </div>
+    
     <div class="datos-ficha">
         
-        <h3 class="titular">Magnifico piso</h3>
-        <p class="precio">125.000</p>
-        <p class="poblacion">A Coruña</p>
-        <p class="operacion">VENTA</p>
+        <span class="precio">{{datos.precio | euros}}</span>
+        
+        <div class="operacion-poblacion">
+            <span class="poblacion">{{datos.poblacion.nombre}}</span>
+            <span class="operacion">{{datos.operacion}}</span>
+        </div>
+
+        
+
     </div>
+
     <footer class="footer-ficha">
 
         <div>
@@ -19,22 +27,24 @@
         <div class="iconos">
 
             <div>
-                <span>3</span>
-                <img src="assets/img/004-bathtub.svg" alt="Icono banho">
+                <span>{{datos.numeroBanhos}}</span>
+                <img src="assets/img/004-bathtub.svg" alt="Icono Baño">
             </div>
 
             <div>
-                <span>2</span>
-                <img src="assets/img/017-bed.svg" alt="icono habitaciones">
+                <span>{{datos.numeroHabitaciones}}</span>
+                <img src="assets/img/017-bed.svg" alt="Icono habitaciones">
             </div>
 
             <div>
-                <span>5</span>
-                <img src="assets/img/011-office building.svg" alt="icono altura">
+                <span>{{datos.planta}}</span>
+                <img src="assets/img/011-office building.svg" alt="Icono altura">
             </div>
 
         </div>
 
     </footer>
+        
+
 
 </article>

@@ -5,14 +5,10 @@
         <img class="imagen-logo" src="assets/img/el-pisito.svg">
         <img class="imagen-logo2" src="assets/img/el-pisito.svg">
         <img class="imagen-logo3" src="assets/img/el-pisito.svg">
+       
 
     </h2>
 
-    <app-ficha-inmueble *ngFor="let inmueble of aDatos" [datos]="inmueble"></app-ficha-inmueble>
-
-
-    <!-- Aquí renderizaremos un "ficha inmueble" tantas veces
-    como inmuebles lleguen de la consulta a la API
--->
+    <app-ficha-inmueble style="display: block;" class="mt-3" *ngFor="let inmueble of aDatos" [datos]="inmueble"></app-ficha-inmueble>
 
 </section>
