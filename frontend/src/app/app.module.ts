@@ -26,6 +26,9 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
 import { FormsModule } from '@angular/forms';
 import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
 import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
+import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
+import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
+import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
     AddTipoComponent,
     PreloaderComponent,
     EditTipoComponent,
+    AddProvinciaComponent,
+    EditProvinciaComponent,
+    ListProvinciaComponent,
   ],
   imports: [
     BrowserModule,

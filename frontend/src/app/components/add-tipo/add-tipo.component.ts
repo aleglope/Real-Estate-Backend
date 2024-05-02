@@ -13,10 +13,10 @@ export class AddTipoComponent implements OnInit {
   constructor(
     private _tipoService : TipoService,
     private _router:Router
-  ){}
+  ){ }
 
   ngOnInit(): void {
-    
+
   }
 
   tipo:Tipo={

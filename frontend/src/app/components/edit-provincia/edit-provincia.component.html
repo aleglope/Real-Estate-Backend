@@ -1,0 +1,37 @@
+<div class="contenedor">
+
+    <h1 class="cabecera-admin">Editar Provincia</h1>
+
+    <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+    <div class="contenedor-formulario" *ngIf="cargaCompletada">
+
+        <form  #form="ngForm" (ngSubmit)="edit()" class="formulario">
+
+            <p class="id-tipo mb-3">ID: {{provincia.id}} </p>
+            
+            <div class="mb-3">
+                <label class="pe-2" for="">ACTIVO</label>
+                <input id="activo" type="checkbox" name="activo" class="form-check-input" [(ngModel)]="provincia.activo">
+
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre">TIPO*</label>
+                <input id="nombre" type="text" name="nombre" required class="form-control"
+                 autocomplete="off" style="text-transform:uppercase" [(ngModel)]="provincia.nombre">
+            </div>
+
+            <div class="contenedor-boton">
+
+                <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">Modificar</button>
+
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+
+</div>

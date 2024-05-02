@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { TipoService } from '../../services/tipo.service';
+import { Component } from '@angular/core';
+import { ProvinciaService } from '../../services/provincia.service';
 import { Router } from '@angular/router';
+import { Provincia } from '../../models/entity';
 
 @Component({
-  selector: 'app-list-tipo',
-  templateUrl: './list-tipo.component.html',
-  styleUrl: './list-tipo.component.css'
+  selector: 'app-list-provincia',
+  templateUrl: './list-provincia.component.html',
+  styleUrl: './list-provincia.component.css'
 })
-export class ListTipoComponent implements OnInit{
+export class ListProvinciaComponent {
 
     ///////////////////////////////////////////////
     nFases:number=1;
@@ -18,7 +19,7 @@ export class ListTipoComponent implements OnInit{
     aDatos:any[];
 
     constructor(
-      private _tipoService:TipoService,
+      private _provinciaService:ProvinciaService,
       private _router:Router
     ){}
 
@@ -31,7 +32,7 @@ export class ListTipoComponent implements OnInit{
 
 getDatos():void{
 
-  this._tipoService.getTipos().subscribe({
+  this._provinciaService.getProvincias().subscribe({
 
     next: (datos)=>{
 
@@ -62,3 +63,4 @@ getDatos():void{
 
 
 }
+
