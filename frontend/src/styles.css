@@ -110,7 +110,16 @@ td,th{
     justify-content: center;
 
 
+}
 
+.id-tipo{
+
+    background-color: var(--gris-claro);
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: #000;
+
+}
 
 /* ================================================= */
 /* MEDIA QUERIES */
@@ -152,7 +161,6 @@ td,th{
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
 @media only screen and (min-width:1200px){
-
 
 
 

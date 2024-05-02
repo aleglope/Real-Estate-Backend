@@ -25,6 +25,7 @@ import { AddTipoComponent } from './components/add-tipo/add-tipo.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { FormsModule } from '@angular/forms';
 import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
+import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
     ListTipoComponent,
     AddTipoComponent,
     PreloaderComponent,
+    EditTipoComponent,
   ],
   imports: [
     BrowserModule,
