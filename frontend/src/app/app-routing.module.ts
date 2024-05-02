@@ -5,8 +5,12 @@ import { ErrorComponent } from './components/error/error.component';
 import { ListTipoComponent } from './components/list-tipo/list-tipo.component';
 import { AddTipoComponent } from './components/add-tipo/add-tipo.component';
 import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
+import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
 import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
 import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
+import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
+import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.component';
+import { ListPoblacionComponent } from './components/list-poblacion/list-poblacion.component';
 
 const routes: Routes = [
 
@@ -16,9 +20,12 @@ const routes: Routes = [
   {path:"list-tipo",component:ListTipoComponent},
   {path:"add-tipo",component:AddTipoComponent},
   {path:"edit-tipo/:id",component:EditTipoComponent},
-  {path:"list-provincia",component:EditProvinciaComponent},
+  {path:"list-provincia",component:ListProvinciaComponent},
   {path:"add-provincia",component:AddProvinciaComponent},
   {path:"edit-provincia/:id",component:EditProvinciaComponent},
+  {path:"list-poblacion",component:ListPoblacionComponent},
+  {path:"add-poblacion",component:AddPoblacionComponent},
+  {path:"edit-poblacion/:id",component:EditPoblacionComponent},
   {path:"error",component:ErrorComponent},
   {path:"**",component:ErrorComponent} //Poner siempre en la última posición!!!
 

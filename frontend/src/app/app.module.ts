@@ -29,6 +29,9 @@ import { EditTipoComponent } from './components/edit-tipo/edit-tipo.component';
 import { AddProvinciaComponent } from './components/add-provincia/add-provincia.component';
 import { EditProvinciaComponent } from './components/edit-provincia/edit-provincia.component';
 import { ListProvinciaComponent } from './components/list-provincia/list-provincia.component';
+import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.component';
+import { ListPoblacionComponent } from './components/list-poblacion/list-poblacion.component';
+import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
 
 
 @NgModule({
@@ -57,6 +60,9 @@ import { ListProvinciaComponent } from './components/list-provincia/list-provinc
     AddProvinciaComponent,
     EditProvinciaComponent,
     ListProvinciaComponent,
+    AddPoblacionComponent,
+    ListPoblacionComponent,
+    EditPoblacionComponent,
   ],
   imports: [
     BrowserModule,
