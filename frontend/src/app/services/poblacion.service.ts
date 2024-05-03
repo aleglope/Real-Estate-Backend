@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class PoblacionService {
 
-
   url:string=GLOBAL.url;
 
   constructor(
@@ -21,7 +20,7 @@ export class PoblacionService {
 
   getPoblaciones():Observable<Poblacion[]>{
 
-    return this._http.get<Poblacion[]>(this.url + "Poblaciones");
+    return this._http.get<Poblacion[]>(this.url + "poblaciones");
 
   }
 
@@ -43,12 +42,11 @@ export class PoblacionService {
 
   }
 
-  updateTipo(poblacion:Poblacion):Observable<Poblacion>{
+
+  updatePoblacion(poblacion:Poblacion):Observable<Poblacion>{
 
     return this._http.put<Poblacion>(this.url + "poblacion",poblacion);
 
   }
 
-
 }
-

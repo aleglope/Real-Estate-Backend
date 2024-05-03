@@ -59,6 +59,11 @@ a{
     text-decoration: none;
 }
 
+.select-inactivo{
+    color: white;
+    background-color: var(--gris-claro);
+}
+
 
 /* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
 .activo{

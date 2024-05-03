@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Tipo } from '../../models/entity';
 import { TipoService } from '../../services/tipo.service';
 import { Router } from '@angular/router';
@@ -8,16 +8,13 @@ import { Router } from '@angular/router';
   templateUrl: './add-tipo.component.html',
   styleUrl: './add-tipo.component.css'
 })
-export class AddTipoComponent implements OnInit {
+export class AddTipoComponent {
 
   constructor(
     private _tipoService : TipoService,
     private _router:Router
   ){ }
 
-  ngOnInit(): void {
-
-  }
 
   tipo:Tipo={
     nombre:"",

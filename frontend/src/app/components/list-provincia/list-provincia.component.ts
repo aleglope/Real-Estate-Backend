@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProvinciaService } from '../../services/provincia.service';
 import { Router } from '@angular/router';
-import { Provincia } from '../../models/entity';
+
 
 @Component({
   selector: 'app-list-provincia',

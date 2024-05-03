@@ -9,56 +9,55 @@ import { Router } from '@angular/router';
 })
 export class ListPoblacionComponent implements OnInit {
 
-    ///////////////////////////////////////////////
-    nFases:number=1;
-    cargaCompletada:boolean=false;
-    fasesCargadas:number=0;
-    ///////////////////////////////////////////////
+  ///////////////////////////////////////////////
+  nFases:number=1;
+  cargaCompletada:boolean=false;
+  fasesCargadas:number=0;
+  ///////////////////////////////////////////////
 
-    aDatos:any[];
+  aDatos:any[];
 
-    constructor(
-      private _poblacionService:PoblacionService,
-      private _router:Router
-    ){}
+  constructor(
+    private _poblacionService:PoblacionService,
+    private _router:Router
+  ){}
 
 
 
-  ngOnInit(): void {
-    this.getDatos();
-  }
+ngOnInit(): void {
+  this.getDatos();
+}
 
 
 getDatos():void{
 
-  this._poblacionService.getPoblaciones().subscribe({
+this._poblacionService.getPoblaciones().subscribe({
 
-    next: (datos)=>{
+  next: (datos)=>{
+    //console.log(datos);
+    this.aDatos = datos;
+  }
+  ,
+  error: (e)=>{this._router.navigate(['/error'])}
+  ,
+  complete: ()=>{this.faseCarga()}
 
-      this.aDatos = datos;
-    }
-    ,
-    error: (e)=>{this._router.navigate(['/error'])}
-    ,
-    complete: ()=>{this.faseCarga()}
-
-  });
+});
 
 
 }
 
 
 
-  /////////////////////////////////////////////////////
-  faseCarga():void{
+/////////////////////////////////////////////////////
+faseCarga():void{
 
-    this.fasesCargadas++;
+  this.fasesCargadas++;
 
-    if(this.fasesCargadas == this.nFases){
-      this.cargaCompletada = true;
-    }
+  if(this.fasesCargadas == this.nFases){
+    this.cargaCompletada = true;
   }
-  //////////////////////////////////////////////////
-
+}
+//////////////////////////////////////////////////
 
 }
