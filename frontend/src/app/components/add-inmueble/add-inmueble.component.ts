@@ -4,7 +4,7 @@ import { PoblacionService } from '../../services/poblacion.service';
 import { TipoService } from '../../services/tipo.service';
 import { Router } from '@angular/router';
 import { InmuebleService } from '../../services/inmueble.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-add-inmueble',
   templateUrl: './add-inmueble.component.html',
@@ -63,10 +63,11 @@ export class AddInmuebleComponent implements OnInit {
   };
 
   constructor(
-    private _tipoService: TipoService,
-    private _poblacionService: PoblacionService,
-    private _inmuebleService: InmuebleService,
-    private _router: Router
+    private poblacionService: PoblacionService,
+    private tipoService: TipoService,
+    private inmuebleService: InmuebleService,
+    private router: Router,
+    private toastr: ToastrService  // Inject ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -74,32 +75,28 @@ export class AddInmuebleComponent implements OnInit {
   }
 
   getDatos(): void {
-    /* RELLENAMOS EL SELECT POBLACIÓN CON LOS DATOS DE LA BBDD */
-    this._poblacionService.getPoblaciones().subscribe({
+    this.poblacionService.getPoblaciones().subscribe({
       next: (datos) => {
         this.aPoblaciones = datos;
-      },
-      error: (error) => {
-        this._router.navigate(['/error']);
-      },
-      complete: () => {
         this.faseCarga();
       },
+      error: (error) => {
+        this.toastr.error('Error al cargar las poblaciones. Por favor, inténtelo de nuevo más tarde.');
+        this.router.navigate(['/error']);
+      }
     });
 
-    /* RELLENAMOS EL SELECT TIPOS CON LOS DATOS DE LA BBDD */
-    this._tipoService.getTipos().subscribe({
+    this.tipoService.getTipos().subscribe({
       next: (datos) => {
         this.aTipos = datos;
-      },
-      error: (error) => {
-        this._router.navigate(['/error']);
-      },
-      complete: () => {
         this.faseCarga();
       },
+      error: (error) => {
+        this.toastr.error('Error al cargar los tipos. Por favor, inténtelo de nuevo más tarde.');
+        this.router.navigate(['/error']);
+      }
     });
-  } //end getDatos()
+  }
 
   add(): void {
     //CONVERTIMOS LOS BOOLEAN DE LOS CHECKS EN NUMBER
@@ -112,16 +109,18 @@ export class AddInmuebleComponent implements OnInit {
     this.inmueble.tendedero = +this.inmueble.tendedero;
     this.inmueble.trastero = +this.inmueble.trastero;
 
-    this._inmuebleService.addInmueble(this.inmueble).subscribe({
-      next: (datos) => {},
-      error: (e) => {
-        this._router.navigate(['/error']);
-      },
-      complete: () => {
-        this._router.navigate(['/list-inmueble']);
-      },
-    });
-  }
+
+      this.inmuebleService.addInmueble(this.inmueble).subscribe({
+        next: () => {
+          this.toastr.success('Inmueble añadido con éxito');
+          this.router.navigate(['/list-inmueble']);
+        },
+        error: () => {
+          this.toastr.error('Error al añadir el inmueble. Inténtelo de nuevo más tarde.');
+          this.router.navigate(['/error']);
+        }
+      });
+    }
 
   /////////////////////////////////////////////////////
   faseCarga(): void {
