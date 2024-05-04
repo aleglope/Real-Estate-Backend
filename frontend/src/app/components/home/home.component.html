@@ -1,15 +1,20 @@
 <!-- This is an HTML code snippet that represents a section of a web page. Here's a breakdown of what it
 does: -->
 <div class="contenedor">
+  <h1>
+    Bienvenido <span class="nombre-usuario"> {{ usuario }} </span> a
+    elpisito.com
+  </h1>
+  <app-finder></app-finder>
 
-    <h1>Bienvenido <span class="nombre-usuario"> {{usuario}} </span> a elpisito.com</h1>
-    <app-finder></app-finder>
+  <!-- Para que un componente admita margin es necesario convertirlo a block -->
+  <app-banner-horizontal
+    style="display: block"
+    class="mb-3"
+    [datos]="datos1"
+  ></app-banner-horizontal>
 
-    <!-- Para que un componente admita margin es necesario convertirlo a block -->
-    <app-banner-horizontal style="display: block;" class="mb-3" [datos]="datos1"></app-banner-horizontal>
+  <app-banner-horizontal [datos]="datos2"></app-banner-horizontal>
 
-    <app-banner-horizontal [datos]="datos2"></app-banner-horizontal>
-
-    <app-list-home style="display: block;" class="mb-3"></app-list-home>
-
+  <app-list-home style="display: block" class="mb-3"></app-list-home>
 </div>

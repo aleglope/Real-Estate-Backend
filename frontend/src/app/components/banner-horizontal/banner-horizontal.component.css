@@ -1,133 +1,96 @@
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
-    .contenedor{
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
 
-        display: flex;
-        flex-direction: column;
-    }
+.imagen {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
 
-    .imagen{    
-        width: 100%;
-        border-radius: 0.5rem 0.5rem 0 0;
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--gris-claro);
+  padding: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
 
-    }
+.texto h3 {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
 
-    .texto{
+.texto p {
+  margin-bottom: 0.8rem;
+  line-height: normal;
+}
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--gris-claro);
-        padding: 1rem;
-        border-radius: 0 0 0.5rem 0.5rem;
-     
-    }
+.texto a {
+  color: var(--negro);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
 
-    .texto h3{
-        font-weight: bold;
-        margin-bottom: 0.8rem;
-    }
+.texto a::before {
+  background-image: url("../../../assets/img/el-pisito.svg");
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: ""; /* esta notación es importante */
+  margin-right: 0.3rem;
+}
 
-    .texto p{
+.texto a:link {
+  color: var(--negro);
+}
 
-        margin-bottom: 0.8rem;
-        line-height: normal;
+.texto a:visited {
+  color: var(--negro);
+}
 
-    }
+.texto a:hover {
+  color: var(--negro);
+}
 
-    .texto a{
-
-        color: var(--negro);
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-
-    }
-
-    .texto a::before{
-        background-image: url('../../../assets/img/el-pisito.svg');
-        background-size: 20px 20px;
-        display: inline-block;
-        width: 20px; 
-        height: 20px;
-        content:""; /* esta notación es importante */  
-        margin-right: 0.3rem; 
-
-    }
-
-    .texto a:link{
-
-        color: var(--negro);
-    }
-
-    .texto a:visited{
-
-        color: var(--negro);
-    }
-
-    .texto a:hover{
-
-        color: var(--negro);
-    }
-
-    .texto a:active{
-
-        color: var(--negro);
-    }
-
+.texto a:active {
+  color: var(--negro);
+}
 
 /* ================================================= */
 /* MEDIA QUERIES */
 /* ================================================= */
 
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
-@media only screen and (min-width:576px){
-
- 
-
-
-
+@media only screen and (min-width: 576px) {
 }
-
 
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
-@media only screen and (min-width:768px){
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    flex-direction: row;
+  }
 
-    .contenedor{
+  .imagen {
+    width: 55%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
 
-        flex-direction: row;
-    }
-
-    .imagen{    
-        width: 55%;
-        border-radius: 0.5rem 0 0 0.5rem;
-
-    }
-
-    .texto{
-
-        border-radius: 0 0.5rem 0.5rem 0;
-     
-    }
-
-
+  .texto {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
 }
 
-
-
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
-@media only screen and (min-width:992px){
-
-
-  
-
+@media only screen and (min-width: 992px) {
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
-@media only screen and (min-width:1200px){
-
-
-
-
+@media only screen and (min-width: 1200px) {
 }

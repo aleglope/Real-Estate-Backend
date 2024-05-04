@@ -4,10 +4,9 @@ import { BannerHorizontal } from '../../models/utils';
 @Component({
   selector: 'app-banner-horizontal',
   templateUrl: './banner-horizontal.component.html',
-  styleUrl: './banner-horizontal.component.css'
+  styleUrl: './banner-horizontal.component.css',
 })
 export class BannerHorizontalComponent {
-
   /* @Input() altImagen:string;
   @Input() imagen:string;
   @Input() titular:string;
@@ -15,7 +14,5 @@ export class BannerHorizontalComponent {
   @Input() link:string;
   @Input() textoLink:string; */
 
-  @Input() datos:BannerHorizontal;
-
-
+  @Input() datos: BannerHorizontal;
 }

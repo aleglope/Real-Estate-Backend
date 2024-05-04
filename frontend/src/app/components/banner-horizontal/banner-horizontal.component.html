@@ -1,15 +1,12 @@
 <div class="contenedor">
+  <img class="imagen" [src]="datos.imagen" [alt]="datos.altImagen" />
 
-    <img class="imagen" [src]="datos.imagen" [alt]="datos.altImagen">
-
-    <div class="texto">
-        <div>
-            <h3>{{datos.titular}}</h3>
-            <p>{{datos.claim}}</p>
-        </div>
- 
-        <a [href]="datos.link">{{datos.textoLink}}</a>
+  <div class="texto">
+    <div>
+      <h3>{{ datos.titular }}</h3>
+      <p>{{ datos.claim }}</p>
     </div>
 
-  
+    <a [href]="datos.link">{{ datos.textoLink }}</a>
+  </div>
 </div>

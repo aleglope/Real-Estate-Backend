@@ -1,37 +1,45 @@
 <div class="contenedor">
+  <h1 class="cabecera-admin">Editar Tipo</h1>
 
-    <h1 class="cabecera-admin">Editar Tipo</h1>
+  <app-preloader *ngIf="!cargaCompletada"></app-preloader>
+  <div class="contenedor-formulario" *ngIf="cargaCompletada">
+    <form #form="ngForm" (ngSubmit)="edit()" class="formulario">
+      <p class="id-tipo mb-3">ID: {{ tipo.id }}</p>
 
-    <app-preloader *ngIf="!cargaCompletada"></app-preloader>
-    <div class="contenedor-formulario" *ngIf="cargaCompletada">
+      <div class="mb-3">
+        <label class="pe-2" for="">ACTIVO</label>
+        <input
+          id="activo"
+          type="checkbox"
+          name="activo"
+          class="form-check-input"
+          [(ngModel)]="tipo.activo"
+        />
+      </div>
 
-        <form  #form="ngForm" (ngSubmit)="edit()" class="formulario">
+      <div class="mb-3">
+        <label for="tipo">TIPO*</label>
+        <input
+          id="tipo"
+          type="text"
+          name="tipo"
+          required
+          class="form-control"
+          autocomplete="off"
+          style="text-transform: uppercase"
+          [(ngModel)]="tipo.nombre"
+        />
+      </div>
 
-            <p class="id-tipo mb-3">ID: {{tipo.id}} </p>
-            
-            <div class="mb-3">
-                <label class="pe-2" for="">ACTIVO</label>
-                <input id="activo" type="checkbox" name="activo" class="form-check-input"[(ngModel)]="tipo.activo">
-
-            </div>
-
-            <div class="mb-3">
-                <label for="tipo">TIPO*</label>
-                <input id="tipo" type="text" name="tipo" required class="form-control"
-                 autocomplete="off" style="text-transform:uppercase" [(ngModel)]="tipo.nombre">
-            </div>
-
-            <div class="contenedor-boton">
-
-                <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">Modificar</button>
-
-            </div>
-
-        </form>
-
-
-
-    </div>
-
-
+      <div class="contenedor-boton">
+        <button
+          type="submit"
+          class="btn btn-md btn-primary"
+          [disabled]="form.invalid"
+        >
+          Modificar
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

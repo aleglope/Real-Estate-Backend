@@ -2,101 +2,85 @@
 /* COLORES CORPORATIVOS*/
 /*====================================================================*/
 
-:root{
-
-    --azul:#256197;
-    --azul-oscuro:#1a456b;
-    --amarillo:#e8b610;
-    --gris:#b1b3b4;
-    --gris-oscuro:#999999;
-    --gris-claro:#eceeef;
-    --negro:#333333;
-
+:root {
+    --azul: #256197;
+    --azul-oscuro: #1a456b;
+    --amarillo: #e8b610;
+    --gris: #b1b3b4;
+    --gris-oscuro: #999999;
+    --gris-claro: #eceeef;
+    --negro: #333333;
 }
 
 /* ================================================= */
 /* FIRST MOBILE */
 /* ================================================= */
 
-html,body{
-
-    font-size: 16px; /* 1rem */
-
+html,
+body {
+    font-size: 16px;
+    /* 1rem */
 }
 
-p{
+p {
     margin: 0;
     padding: 0;
 }
 
-h1{
-
+h1 {
     font-size: 24px;
     margin: 0;
     padding: 0;
-
 }
 
-
-h2{
-
+h2 {
     font-size: 18px;
     margin: 0;
     padding: 0;
-
 }
 
-h3{
-
+h3 {
     font-size: 16px;
     margin: 0;
     padding: 0;
-
 }
 
-a{
-
+a {
     text-decoration: none;
 }
 
-.select-inactivo{
+.select-inactivo {
     color: white;
     background-color: var(--gris-claro);
 }
 
-
 /* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
-.activo{
-
+.activo {
     font-size: 2rem;
-    color:greenyellow;
-    text-align:center;
+    color: greenyellow;
+    text-align: center;
 }
 
 /* ES PARA LOS PUNTOS DE ACTIVO EN LOS LIST */
-.inactivo{
-
+.inactivo {
     font-size: 2rem;
-    color:red;
-    text-align:center;
-
-}
-
-/* ES PARA LOS LIST */
-.centrar-activo{
-
+    color: red;
     text-align: center;
 }
 
 /* ES PARA LOS LIST */
-td,th{
+.centrar-activo,
+.centrar-portada {
+    text-align: center;
+}
+
+/* ES PARA LOS LIST */
+td,
+th {
     vertical-align: middle;
 }
 
-
-
-.cabecera-admin{
-
+.cabecera-admin {
     background-color: var(--gris);
     border-radius: 5px;
     padding: 0.5rem;
@@ -104,26 +88,20 @@ td,th{
     color: white;
 }
 
-.formulario{
-
+.formulario {
     width: 80%;
 }
 
-.contenedor-formulario{
-
+.contenedor-formulario {
     display: flex;
     justify-content: center;
-
-
 }
 
-.id-tipo{
-
+.id-tipo {
     background-color: var(--gris-claro);
     border-radius: 5px;
     padding: 0.5rem;
     color: #000;
-
 }
 
 /* ================================================= */
@@ -131,42 +109,21 @@ td,th{
 /* ================================================= */
 
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
-@media only screen and (min-width:576px){
-
-
-
-
-
-}
-
+@media only screen and (min-width: 576px) {}
 
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
-@media only screen and (min-width:768px){
-
-    .formulario{
-
+@media only screen and (min-width: 768px) {
+    .formulario {
         width: 50%;
     }
-
-
 }
 
-
-
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
-@media only screen and (min-width:992px){
-
-    .formulario{
-
+@media only screen and (min-width: 992px) {
+    .formulario {
         width: 40%;
     }
-  
-
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
-@media only screen and (min-width:1200px){
-
-
-
-}
+@media only screen and (min-width: 1200px) {}

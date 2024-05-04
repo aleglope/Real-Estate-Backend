@@ -1,27 +1,31 @@
 <div class="contenedor">
+  <h1 class="cabecera-admin">+Tipo</h1>
 
-    <h1 class="cabecera-admin">+Tipo</h1>
+  <div class="contenedor-formulario">
+    <form #form="ngForm" (ngSubmit)="add()" class="formulario">
+      <div class="mb-3">
+        <label for="tipo">TIPO*</label>
+        <input
+          id="tipo"
+          type="text"
+          name="tipo"
+          required
+          class="form-control"
+          autocomplete="off"
+          style="text-transform: uppercase"
+          [(ngModel)]="tipo.nombre"
+        />
+      </div>
 
-    <div class="contenedor-formulario">
-
-        <form  #form="ngForm" (ngSubmit)="add()" class="formulario">
-
-            <div class="mb-3">
-                <label for="tipo">TIPO*</label>
-                <input id="tipo" type="text" name="tipo" required class="form-control" autocomplete="off" style="text-transform:uppercase" [(ngModel)]="tipo.nombre">
-            </div>
-
-            <div class="contenedor-boton">
-
-                <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">ADD</button>
-
-            </div>
-
-        </form>
-
-
-
-    </div>
-
-
+      <div class="contenedor-boton">
+        <button
+          type="submit"
+          class="btn btn-md btn-primary"
+          [disabled]="form.invalid"
+        >
+          ADD
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

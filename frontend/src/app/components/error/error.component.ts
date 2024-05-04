@@ -3,12 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-error',
   templateUrl: './error.component.html',
-  styleUrl: './error.component.css'
+  styleUrl: './error.component.css',
 })
 export class ErrorComponent {
-
-  numeroError:string="404";
-  mensajeError:string="Recurso no encontrado";
-
-
+  numeroError: string = '404';
+  mensajeError: string = 'Recurso no encontrado';
 }

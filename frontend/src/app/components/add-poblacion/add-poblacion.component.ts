@@ -7,86 +7,71 @@ import { Poblacion, Provincia } from '../../models/entity';
 @Component({
   selector: 'app-add-poblacion',
   templateUrl: './add-poblacion.component.html',
-  styleUrl: './add-poblacion.component.css'
+  styleUrl: './add-poblacion.component.css',
 })
 export class AddPoblacionComponent implements OnInit {
+  ///////////////////////////////////////////////
+  nFases: number = 1;
+  cargaCompletada: boolean = false;
+  fasesCargadas: number = 0;
+  ///////////////////////////////////////////////
 
-    ///////////////////////////////////////////////
-    nFases:number=1;
-    cargaCompletada:boolean=false;
-    fasesCargadas:number=0;
-    ///////////////////////////////////////////////
-
-
-
-  aProvincias:Provincia[];
+  aProvincias: Provincia[];
 
   constructor(
-    private _provinciaService : ProvinciaService,
-    private _poblacionService : PoblacionService,
-    private _router:Router
-  ){}
-
+    private _provinciaService: ProvinciaService,
+    private _poblacionService: PoblacionService,
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getDatos();
   }
 
-  poblacion:Poblacion={
-    nombre:"",
-    provincia:{
-      nombre:"",
-      activo:0
+  poblacion: Poblacion = {
+    nombre: '',
+    provincia: {
+      nombre: '',
+      activo: 0,
     },
-    activo:1
-  }
+    activo: 1,
+  };
 
-
-
-  getDatos():void{
-
+  getDatos(): void {
     this._provinciaService.getProvincias().subscribe({
-
-      next: (datos)=>{
+      next: (datos) => {
         this.aProvincias = datos;
-      }
-      ,
-      error: (error)=>{this._router.navigate(['/error'])}
-      ,
-      complete: ()=>{this.faseCarga()}
-
+      },
+      error: (error) => {
+        this._router.navigate(['/error']);
+      },
+      complete: () => {
+        this.faseCarga();
+      },
     });
-
   }
 
-
-  add():void{
-
+  add(): void {
     this.poblacion.nombre = this.poblacion.nombre.toUpperCase();
 
     this._poblacionService.addPoblacion(this.poblacion).subscribe({
-
-        next: (datos)=>{}
-        ,
-        error: (e)=>{this._router.navigate(['/error'])}
-        ,
-        complete: ()=>{this._router.navigate(['/list-poblacion'])}
-
+      next: (datos) => {},
+      error: (e) => {
+        this._router.navigate(['/error']);
+      },
+      complete: () => {
+        this._router.navigate(['/list-poblacion']);
+      },
     });
-
   }
 
-
   /////////////////////////////////////////////////////
-  faseCarga():void{
-
+  faseCarga(): void {
     this.fasesCargadas++;
 
-    if(this.fasesCargadas == this.nFases){
+    if (this.fasesCargadas == this.nFases) {
       this.cargaCompletada = true;
     }
   }
   //////////////////////////////////////////////////
-
-
 }

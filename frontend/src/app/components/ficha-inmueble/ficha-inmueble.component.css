@@ -2,169 +2,133 @@
 /* FIRST MOBILE */
 /* ================================================= */
 
-.ficha{
-
-    display: flex;
-    flex-direction: column;
-
+.ficha {
+  display: flex;
+  flex-direction: column;
 }
 
-
-.iconos{
-    display: flex;
-    margin-right: 1rem;
+.iconos {
+  display: flex;
+  margin-right: 1rem;
 }
 
-
-.iconos img{
-
-    height: 1.4rem;
-
+.iconos img {
+  height: 1.4rem;
 }
 
-
-.iconos div{
-
-    display: flex;
-    align-items: center;
-    margin-left: 0.8rem;
-
+.iconos div {
+  display: flex;
+  align-items: center;
+  margin-left: 0.8rem;
 }
 
-
-.iconos span{
-
-    font-size: 1.3rem;
-    color: var(--negro);
-    font-weight:600;
-    margin-right: 0.2rem;
+.iconos span {
+  font-size: 1.3rem;
+  color: var(--negro);
+  font-weight: 600;
+  margin-right: 0.2rem;
 }
 
-.footer-ficha{
-
-    background-color: var(--gris-claro);
-    border-radius: 0 0 0.5rem 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:0.5rem;
+.footer-ficha {
+  background-color: var(--gris-claro);
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-.footer-ficha div:first-child{
-    display: flex;
-    align-items: center;
+.footer-ficha div:first-child {
+  display: flex;
+  align-items: center;
 }
 
-.boton-info{
-
-    cursor: pointer;
-    font-size: 2rem;
-    margin-left: 1rem;
-    color:var(--azul-oscuro);
+.boton-info {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: var(--azul-oscuro);
 }
 
-.precio{
-    font-size: 1.5rem;
+.precio {
+  font-size: 1.5rem;
 }
 
-.datos-ficha{
-    padding: 0.5rem 1rem;
-    border-left: 1px #eeeeee solid;
-    border-right: 1px #eeeeee solid;
+.datos-ficha {
+  padding: 0.5rem 1rem;
+  border-left: 1px #eeeeee solid;
+  border-right: 1px #eeeeee solid;
 }
 
-.operacion-poblacion{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.operacion-poblacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.operacion{
-    font-size: 1.2rem;
+.operacion {
+  font-size: 1.2rem;
 }
 
-.descripcion{
-    display: none;
+.descripcion {
+  display: none;
 }
-
 
 /* ================================================= */
 /* MEDIA QUERIES */
 /* ================================================= */
 
 /* MAYOR O IGUAL DE 576PX (A PARTIR DE 575PX INCLUSIVE) - SMARTPHONES */
-@media only screen and (min-width:576px){
-
- 
-
-
-
+@media only screen and (min-width: 576px) {
 }
-
 
 /* MAYOR O IGUAL DE 768PX (A PARTIR DE 768PX INCLUSIVE) - SMARTPHONES GRANDES, TABLETS */
-@media only screen and (min-width:768px){
+@media only screen and (min-width: 768px) {
+  .ficha {
+    flex-direction: row;
+  }
 
-    .ficha{
-        flex-direction: row;  
-    }
+  .carousel-ficha {
+    width: 55%;
+  }
 
-    .carousel-ficha{
-        width: 55%;
-    }
+  .datos-y-footer {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px #eeeeee solid;
+    border-top: 1px #eeeeee solid;
+    border-left: none;
+    border-right: 1px #eeeeee solid;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
 
-    .datos-y-footer{
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-bottom: 1px #eeeeee solid;
-        border-top: 1px #eeeeee solid;
-        border-left: none;
-        border-right: 1px #eeeeee solid;
-        border-radius: 0 0.5rem 0.5rem 0;
-    }
+  .footer-ficha {
+    border-radius: 0 0 0.5rem 0;
+    background-color: white;
+  }
 
-    .footer-ficha{
-        border-radius: 0 0 0.5rem 0;
-        background-color: white;
+  .datos-ficha {
+    border-left: none;
+    border-right: none;
+  }
 
-    }
+  .operacion-poblacion {
+    flex-direction: column;
+    align-items: start;
+  }
 
-    .datos-ficha{
-        border-left: none;
-        border-right: none;
-    }
-
-    .operacion-poblacion{
-
-        flex-direction: column;
-        align-items: start;
-
-    }
-
-    .descripcion{
-        display: inline-block;
-        margin-top: 1rem;
-    }
-
-
+  .descripcion {
+    display: inline-block;
+    margin-top: 1rem;
+  }
 }
 
-
-
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
-@media only screen and (min-width:992px){
-
-
-  
-
+@media only screen and (min-width: 992px) {
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */
-@media only screen and (min-width:1200px){
-
-
-
-
+@media only screen and (min-width: 1200px) {
 }

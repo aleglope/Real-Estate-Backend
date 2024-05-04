@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuPrincipalComponent } from './components/menu-principal/menu-principal.component';
@@ -32,7 +31,10 @@ import { ListProvinciaComponent } from './components/list-provincia/list-provinc
 import { AddPoblacionComponent } from './components/add-poblacion/add-poblacion.component';
 import { ListPoblacionComponent } from './components/list-poblacion/list-poblacion.component';
 import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblacion.component';
-
+import { ListInmuebleComponent } from './components/list-inmueble/list-inmueble.component';
+import { EditInmuebleComponent } from './components/edit-inmueble/edit-inmueble.component';
+import { AddInmuebleComponent } from './components/add-inmueble/add-inmueble.component';
+import { AddImagenComponent } from './components/add-imagen/add-imagen.component';
 
 @NgModule({
   declarations: [
@@ -63,14 +65,13 @@ import { EditPoblacionComponent } from './components/edit-poblacion/edit-poblaci
     AddPoblacionComponent,
     ListPoblacionComponent,
     EditPoblacionComponent,
+    ListInmuebleComponent,
+    EditInmuebleComponent,
+    AddInmuebleComponent,
+    AddImagenComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
