@@ -7,43 +7,22 @@
     <form #form="ngForm" (ngSubmit)="add()" class="formulario">
       <div class="mb-3">
         <label for="nombre">POBLACIÓN*</label>
-        <input
-          id="nombre"
-          type="text"
-          name="nombre"
-          required
-          class="form-control"
-          autocomplete="off"
-          style="text-transform: uppercase"
-          [(ngModel)]="poblacion.nombre"
-        />
+        <input id="nombre" type="text" name="nombre" required class="form-control" autocomplete="off"
+          style="text-transform: uppercase" [(ngModel)]="poblacion.nombre" />
       </div>
 
       <div class="mb-3">
         <label for="provincia">PROVINCIA*</label>
-        <select
-          name="provincia"
-          id="provincia"
-          class="form-select"
-          required
-          [(ngModel)]="poblacion.provincia.id"
-        >
-          <option
-            [ngClass]="{ 'select-inactivo': provincia.activo == 0 }"
-            value="{{ provincia.id }}"
-            *ngFor="let provincia of aProvincias"
-          >
+        <select name="provincia" id="provincia" class="form-select" required [(ngModel)]="poblacion.provincia.id">
+          <option [ngClass]="{ 'select-inactivo': provincia.activo == 0 }" value="{{ provincia.id }}"
+            *ngFor="let provincia of aProvincias">
             {{ provincia.nombre }}
           </option>
         </select>
       </div>
 
       <div class="contenedor-boton">
-        <button
-          type="submit"
-          class="btn btn-md btn-primary"
-          [disabled]="form.invalid"
-        >
+        <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">
           +Población
         </button>
       </div>

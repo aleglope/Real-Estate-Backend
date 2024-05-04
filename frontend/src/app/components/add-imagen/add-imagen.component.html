@@ -3,11 +3,14 @@
   <div class="contenedor-input-thumbs">
     <div class="mb-3">
       <label for="file">IMAGEN:</label>
-      <input #imagen id="file" name="imagen" type="file" class="form-control" accept=".jpg, .jpeg, .png" (change)="upload($event)" multiple />
+      <input #imagen id="file" name="imagen" type="file" class="form-control" accept=".jpg, .jpeg, .png"
+        (change)="upload($event)" multiple />
     </div>
-    <button class="btn btn-success" (click)="sendImagenes()">Enviar Imágenes</button>
+    <button class="btn btn-success" (click)="sendImagenes()">
+      Enviar Imágenes
+    </button>
     <div class="preview-container">
-      <img *ngFor="let imgSrc of imagePreviews" [src]="imgSrc" alt="Imagen inmueble" >
+      <img *ngFor="let imgSrc of imagePreviews" [src]="imgSrc" alt="Imagen inmueble" />
     </div>
   </div>
 </div>
