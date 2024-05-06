@@ -1,19 +1,14 @@
 <article class="ficha">
-  <app-carousel-ficha
-    class="carousel-ficha"
-    [datosCarousel]="datos"
-  ></app-carousel-ficha>
+  <app-carousel-ficha class="carousel-ficha" [datosCarousel]="datos"></app-carousel-ficha>
 
   <div class="datos-y-footer">
     <div class="datos-ficha">
-      <span class="precio">{{ datos.precio | euros }}</span>
+      <span class="precio-parpadeo">{{ datos.precio | euros }}</span>
 
       <div class="operacion-poblacion">
-        <span class="poblacion"
-          >{{ datos.poblacion.nombre }} ({{
-            datos.poblacion.provincia.nombre
-          }})</span
-        >
+        <span class="poblacion">{{ datos.poblacion.nombre }} ({{
+          datos.poblacion.provincia.nombre
+          }})</span>
         <span class="operacion">{{ datos.operacion }}</span>
       </div>
 

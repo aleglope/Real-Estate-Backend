@@ -24,37 +24,25 @@
           <td scope="row">{{ dato.tipo.nombre }}</td>
           <td scope="row">{{ dato.operacion }}</td>
           <td scope="row">{{ dato.direccionCompleta }}</td>
-          <td
-            [ngClass]="{
+          <td [ngClass]="{
               activo: dato.portada == 1,
               inactivo: dato.portada == 0
-            }"
-          >
+            }">
             ●
           </td>
-          <td
-            [ngClass]="{
+          <td [ngClass]="{
               activo: dato.activo == 1,
               inactivo: dato.activo == 0
-            }"
-          >
+            }">
             ●
           </td>
           <td>
-            <button
-              type="button"
-              class="btn btn-success btn-sm"
-              [routerLink]="['/edit-inmueble', dato.id]"
-            >
+            <button type="button" class="btn btn-success btn-sm" [routerLink]="['/edit-inmueble', dato.id]">
               Editar
             </button>
           </td>
           <td>
-            <button
-              type="button"
-              class="btn btn-primary btn-sm "
-              [routerLink]="['/add-imagen', dato.id]"
-            >
+            <button type="button" class="btn btn-primary btn-sm " [routerLink]="['/add-imagen', dato.id]">
               +Imagen
             </button>
           </td>

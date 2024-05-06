@@ -5,6 +5,9 @@
 .ficha {
   display: flex;
   flex-direction: column;
+  border: 5px solid var(--azul-oscuro);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .iconos {
@@ -50,9 +53,27 @@
   color: var(--azul-oscuro);
 }
 
-.precio {
+.precio-parpadeo[_ngcontent-ng-c3936408344] {
   font-size: 1.5rem;
+  animation-name: _ngcontent-ng-c3936408344_parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
 }
+
+  @keyframes parpadeo {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
 
 .datos-ficha {
   padding: 0.5rem 1rem;
@@ -89,7 +110,8 @@
   }
 
   .carousel-ficha {
-    width: 55%;
+    width: 65%;
+    overflow: hidden;
   }
 
   .datos-y-footer {

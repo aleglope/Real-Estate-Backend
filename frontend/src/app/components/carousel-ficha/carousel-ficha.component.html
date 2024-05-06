@@ -1,10 +1,6 @@
 <!-- EN EL CASO DE QUE EL INMUEBLE TENGA AL MENOS UNA IMAGEN -->
-<div
-  *ngIf="datosCarousel.imagenes.length > 0"
-  id="carouselFicha{{ datosCarousel.id }}"
-  class="carousel slide"
-  data-bs-ride="carousel"
->
+<div *ngIf="datosCarousel.imagenes.length > 0" id="carouselFicha{{ datosCarousel.id }}" class="carousel slide"
+  data-bs-ride="carousel">
   <!-- *ngFor en cada iteración nos provee de forma automática (por defecto) de un índice
   Para utilizarlo necesitamos declararlo. En la iteración 1, index = 0, en la iteración 2
 index = 1 y así sucesivamente
@@ -14,39 +10,22 @@ Ejemplo: 'active': i con let i=first solo lo aplica al primer elemento-->
 en datosCarousel.imagenes -->
 
   <div class="carousel-inner">
-    <div
-      [ngClass]="{
+    <div [ngClass]="{
         'carousel-item': true,
         active: i == 0
-      }"
-      *ngFor="let imagen of datosCarousel.imagenes; let i = index"
-    >
-      <img
-        src="{{ url + imagen.nombre }}"
-        class="d-block w-100"
-        alt="{{ datosCarousel.descripcion }}"
-      />
+      }" *ngFor="let imagen of datosCarousel.imagenes; let i = index">
+      <img src="{{ url + imagen.nombre }}" class="d-block w-100" alt="{{ datosCarousel.descripcion }}" />
     </div>
   </div>
 
-  <button
-    *ngIf="datosCarousel.imagenes.length > 1"
-    class="carousel-control-prev"
-    type="button"
-    [attr.data-bs-target]="'#carouselFicha' + datosCarousel.id"
-    data-bs-slide="prev"
-  >
+  <button *ngIf="datosCarousel.imagenes.length > 1" class="carousel-control-prev" type="button"
+    [attr.data-bs-target]="'#carouselFicha' + datosCarousel.id" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <!-- <span class="visually-hidden">Previous</span> -->
   </button>
 
-  <button
-    *ngIf="datosCarousel.imagenes.length > 1"
-    class="carousel-control-next"
-    type="button"
-    [attr.data-bs-target]="'#carouselFicha' + datosCarousel.id"
-    data-bs-slide="next"
-  >
+  <button *ngIf="datosCarousel.imagenes.length > 1" class="carousel-control-next" type="button"
+    [attr.data-bs-target]="'#carouselFicha' + datosCarousel.id" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <!-- <span class="visually-hidden">Next</span> -->
   </button>

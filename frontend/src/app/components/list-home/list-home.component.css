@@ -43,14 +43,15 @@
 
 /* MAYOR O IGUAL DE 992PX (A PARTIR DE 992PX INCLUSIVE) - PC PEQUEÑOS, LAPTOPS */
 @media only screen and (min-width: 992px) {
-  .contenedor-fichas {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-  .ficha {
-    width: 60%;
-  }
+.contenedor-fichas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.ficha {
+  width: 60%;
+}
 }
 
 /* MAYOR O IGUAL DE 1200PX (A PARTIR DE 1200PX INCLUSIVE) - PC GRANDES, TELEVISIONES */

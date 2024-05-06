@@ -69,6 +69,7 @@ import { AddImagenComponent } from './components/add-imagen/add-imagen.component
     EditPoblacionComponent,
     ListInmuebleComponent,
     EditInmuebleComponent,
+    AddInmuebleComponent,
     AddImagenComponent,
   ],
   imports: [
@@ -79,7 +80,7 @@ import { AddImagenComponent } from './components/add-imagen/add-imagen.component
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
-      positionClass: 'toast-bottom-right',
+      positionClass: 'toast-top-full-width',
       preventDuplicates: true,
     }),
   ],
