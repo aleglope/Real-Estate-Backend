@@ -21,64 +21,46 @@ import com.ipartek.springboot.backend.apirest.models.services.IGeneralService;
 @RestController
 @RequestMapping("/api")
 public class ProvinciaRestController {
-	
-	
+
 	@Autowired
 	private IGeneralService<Provincia> provinciaService;
-	
-	
 
 	@GetMapping("/provincias")
 	public List<Provincia> findAll() {
-		
-		
+
 		return provinciaService.findAll();
-		
+
 	}
-	
-	
+
 	@GetMapping("/provincias-activas")
-	public List<Provincia> findAllActive(){
-		
+	public List<Provincia> findAllActive() {
+
 		return provinciaService.findAllActive();
 	}
-	
-	
-	
-	
+
 	@GetMapping("/provincia/{id}")
 	public Provincia findById(@PathVariable Long id) {
-		
-		
+
 		return provinciaService.findById(id);
-		
+
 	}
-	
-	
+
 	@PostMapping("/provincia")
 	public Provincia create(@RequestBody Provincia provincia) {
-			
+
 		return provinciaService.save(provincia);
 	}
-	
-	
-	
+
 	@PutMapping("/provincia")
 	public Provincia update(@RequestBody Provincia provincia) {
-		
+
 		return provinciaService.save(provincia);
 	}
-	
-	
-	
+
 	@DeleteMapping("/provincia/{id}")
 	public void deleteById(@PathVariable Long id) {
-		
+
 		provinciaService.deleteById(id);
 	}
-	
-	
-	
-	
 
 }

@@ -25,31 +25,27 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="imagenes")
+@Table(name = "imagenes")
 public class Imagen implements Serializable {
-	
-	
+
 	@Serial
 	private static final long serialVersionUID = 2349985578667285154L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Incremental para mySQL
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Incremental para mySQL
 	@Column
 	private Long id;
-	
+
 	@Column
-	private String nombre; //7858858757825785789925592.jpg
-	
+	private String nombre; // 7858858757825785789925592.jpg
+
 	@Column
-	private Integer activo=1;
-	
-	
-	//@JsonBackReference  //para pruebas con objetos json en Postman
+	private Integer activo = 1;
+
+	// @JsonBackReference //para pruebas con objetos json en Postman
 	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name="inmueble")
-	private Inmueble inmueble;//Este es el mappedBy de @OneToMany de la clase Inmueble
-	
-	
+	@JoinColumn(name = "inmueble")
+	private Inmueble inmueble;// Este es el mappedBy de @OneToMany de la clase Inmueble
 
 }

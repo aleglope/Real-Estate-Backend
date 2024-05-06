@@ -25,27 +25,25 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="provincias")
+@Table(name = "provincias")
 public class Provincia implements Serializable {
 
 	@Serial
 	private static final long serialVersionUID = -4355422648219112686L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Incremental para mySQL
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Incremental para mySQL
 	@Column
 	private Long id;
-	
+
 	@Column
-	private String nombre; 
-	
+	private String nombre;
+
 	@Column
-	private Integer activo=1;
-	
+	private Integer activo = 1;
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "provincia")
 	private Set<Poblacion> poblaciones;
-	
-	
-	
+
 }
