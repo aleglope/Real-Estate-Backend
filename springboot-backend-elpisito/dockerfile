@@ -1,0 +1,32 @@
+# Etapa 1: Compilación
+FROM maven:3.8.5-openjdk-17 AS build
+
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copia el archivo pom.xml y las dependencias de Maven al contenedor
+COPY pom.xml .
+
+# Descarga las dependencias del proyecto
+RUN mvn dependency:go-offline
+
+# Copia el código fuente al contenedor
+COPY src ./src
+
+# Paquete el proyecto como un archivo JAR
+RUN mvn clean package -DskipTests
+
+# Etapa 2: Ejecución
+FROM openjdk:17-jdk-alpine
+
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copia el archivo JAR desde la etapa de compilación
+COPY --from=build /app/target/springboot-backend-elpisito-0.0.1-SNAPSHOT.jar /app/springboot-backend-elpisito.jar
+
+# Expone el puerto en el que la aplicación se ejecuta
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación Spring Boot
+ENTRYPOINT ["java", "-jar", "/app/springboot-backend-elpisito.jar"]
