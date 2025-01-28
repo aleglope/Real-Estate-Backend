@@ -56,7 +56,7 @@ Para ejecutar esta aplicación en su máquina local, deberá instalar lo siguien
 - instalación npm -g @ angular/cli
 - ng nuevo mi-proyecto-angular
 - cd mi-proyecto-angular
-- ng servir
+- ng server
 
 ## Configurando el backend de Spring Boot
 
@@ -80,3 +80,61 @@ Para ejecutar esta aplicación en su máquina local, deberá instalar lo siguien
 - spring.datasource.password=tu-contraseña
 
 3 . Reemplace su nombre de base de datos, su nombre de usuario y su contraseña con sus detalles reales de MySQL.
+
+# Real Estate - Spring Boot y Angular con Docker
+
+Este proyecto es una aplicación de gestión inmobiliaria desarrollada con **Spring Boot** para el backend y **Angular** para el frontend. Utilizamos contenedores Docker para simplificar el despliegue y la ejecución de la aplicación.
+
+## Tecnologías Utilizadas
+- **Backend**: Spring Boot (Java)
+- **Frontend**: Angular
+- **Base de Datos**: MySQL
+- **Gestión de Contenedores**: Docker & Docker Compose
+
+## Requisitos Previos
+Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
+1. [Docker](https://www.docker.com/)
+2. [Docker Compose](https://docs.docker.com/compose/)
+
+## Cómo Ejecutar la Aplicación
+
+Sigue estos pasos para lanzar la aplicación utilizando Docker Compose:
+
+### 1. Clonar el Repositorio
+Clona el proyecto en tu máquina local:
+```bash
+git clone https://github.com/aleglope/Real-Estate-Backend.git
+cd Real-Estate-Backend
+```
+## Crea un archivo .env en la raíz del proyecto y copia .env.template con tus datos
+```bash
+docker-compose up --build
+```
+4. Servicios Disponibles
+Una vez levantados los contenedores, podrás acceder a los siguientes servicios:
+
+- Frontend: http://localhost
+- Backend: http://localhost:8080
+- Base de Datos (MySQL): Disponible en el puerto 3306.
+- Adminer (opcional): http://localhost:8081 (herramienta para administrar la base de datos).
+
+5 . Scripts de Inicialización
+El contenedor de MySQL ejecutará automáticamente los scripts SQL ubicados en la carpeta init-scripts/. Esto incluye la creación de la base de datos, tablas y datos iniciales según el archivo init.sql.
+
+6 . Archivos Estáticos y Media Files
+Las imágenes y archivos necesarios para la aplicación se cargan automáticamente desde la carpeta mediafiles en el backend. Estas imágenes estarán disponibles en las rutas configuradas por el servidor Spring Boot, como /media/<nombre-imagen>.
+
+#Comandos Útiles
+## Detener los Contenedores
+## Para detener y eliminar los contenedores, utiliza:
+
+```bash
+docker-compose down
+```
+## Reconstruir los Contenedores
+## Si realizas cambios en el código o configuración, reconstruye los contenedores con:
+
+```bash
+docker-compose up --build
+```
+
