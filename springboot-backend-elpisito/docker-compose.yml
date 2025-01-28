@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mysql_db:
@@ -13,6 +13,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./init-scripts:/docker-entrypoint-initdb.d
     restart: always
 
   springboot_app:
@@ -26,8 +27,30 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
     ports:
       - "8080:8080"
+    volumes:
+      - ./mediafiles:/app/mediafiles
     depends_on:
       - mysql_db
+    restart: always
+
+  frontend_app:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "80:80"
+    depends_on:
+      - springboot_app
+    restart: always
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql_db
+    ports:
+      - "8081:8080"
     restart: always
 
 volumes:
