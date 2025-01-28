@@ -4,7 +4,7 @@ Bienvenido a nuestra aplicación de gestión inmobiliaria: una solución integra
 
 ## Descripción general
 
-![:P](https://i.postimg.cc/YSpRBKZp/Captura-de-pantalla-2024-04-12-015145.png)
+https://i.postimg.cc/YSpRBKZp/Captura-de-pantalla-2024-04-12-015145.png
 
 # Aplicación de gestión inmobiliaria
 
